@@ -2,7 +2,7 @@ export default [
 	{
 		name: 'roomTexture',
 		type: 'texture',
-		path: 'models/Room/baked1.jpg'
+		path: 'models/Room/baked.png'
 	},
 	{
 		name: 'roomModel',
