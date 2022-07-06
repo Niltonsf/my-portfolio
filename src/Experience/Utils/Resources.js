@@ -31,7 +31,7 @@ export default class Resources extends EventEmitter {
 		// Load each source
 		for (const source of this.sources) {
 			switch (source.type) {
-				case 'gltfModel':
+				case 'gltfModel':					
 					this.loaders.gltfLoader.load(
 						source.path,
 						(file) => {
@@ -39,7 +39,7 @@ export default class Resources extends EventEmitter {
 						}
 					);
 					break;
-				case 'texture':									
+				case 'texture':													
 					this.loaders.textureLoader.load(
 						source.path,
 						(file) => {							
