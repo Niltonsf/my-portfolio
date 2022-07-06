@@ -3,6 +3,7 @@ import Experience from "../Experience";
 import Environment from "./Environment";
 import Room from './Room';
 import Coffee from './Coffee';
+import Chair from './Chair';
 
 export default class World {
 	constructor() {
@@ -16,12 +17,13 @@ export default class World {
 			// Class Instance
 			this.room = new Room();
 			this.coffee = new Coffee();
+			this.chair = new Chair();
 			// this.environment = new Environment();
 		});
 	}
 
-	update() {
-		// if (this.fox) this.fox.update();
+	update() {		
 		if(this.coffee) this.coffee.update();
+		if(this.chair) this.chair.update();
 	}
 }

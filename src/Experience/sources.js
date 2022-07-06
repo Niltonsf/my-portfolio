@@ -10,6 +10,11 @@ export default [
 		path: 'models/Room/coffee.glb'
 	},
 	{
+		name: 'chairModel',
+		type: 'gltfModel',
+		path: 'models/Room/chair.glb'
+	},
+	{
 		name: 'roomModel',
 		type: 'glbModelDraco',
 		path: 'models/Room/room.glb'
