@@ -4,6 +4,7 @@ import Environment from "./Environment";
 import Room from './Room';
 import Coffee from './Coffee';
 import Chair from './Chair';
+import Monitor from './Monitor';
 
 export default class World {
 	constructor() {
@@ -18,6 +19,7 @@ export default class World {
 			this.room = new Room();
 			this.coffee = new Coffee();
 			this.chair = new Chair();
+			this.monitor = new Monitor();
 			// this.environment = new Environment();
 		});
 	}

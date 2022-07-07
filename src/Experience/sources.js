@@ -15,6 +15,11 @@ export default [
 		path: 'models/Room/chair.glb'
 	},
 	{
+		name: 'monitorScreenModel',
+		type: 'gltfModel',
+		path: 'models/Room/monitor.glb'
+	},
+	{
 		name: 'roomModel',
 		type: 'glbModelDraco',
 		path: 'models/Room/room.glb'
