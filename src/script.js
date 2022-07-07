@@ -1,4 +1,5 @@
-import './style.css'
+import './index.css';
+import '../tailwind/tailwind.css';
 import Experience from './Experience/Experience.js';
 
 // Experience
