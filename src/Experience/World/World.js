@@ -1,31 +1,31 @@
-import * as THREE from 'three';
+import * as THREE from "three";
 import Experience from "../Experience";
 import Environment from "./Environment";
-import Room from './Room';
-import Coffee from './Coffee';
-import Chair from './Chair';
-import Monitor from './Monitor';
+import Room from "./Room";
+import Coffee from "./Coffee";
+import Chair from "./Chair";
+import Monitor from "./Monitor";
 
 export default class World {
-	constructor() {
-		this.experience = new Experience();
+  constructor() {
+    this.experience = new Experience();
 
-		this.scene = this.experience.scene;
-		this.resources = this.experience.resources;	
+    this.scene = this.experience.scene;
+    this.resources = this.experience.resources;
 
-		// Wait for resources
-		this.resources.on('ready', () => {
-			// Class Instance
-			this.room = new Room();
-			this.coffee = new Coffee();
-			this.chair = new Chair();
-			this.monitor = new Monitor();
-			// this.environment = new Environment();
-		});
-	}
+    // Wait for resources
+    this.resources.on("ready", () => {
+      // Class Instance
+      this.room = new Room();
+      this.coffee = new Coffee();
+      this.chair = new Chair();
+      this.monitor = new Monitor();
+      // this.environment = new Environment();
+    });
+  }
 
-	update() {		
-		if(this.coffee) this.coffee.update();
-		if(this.chair) this.chair.update();
-	}
+  update() {
+    if (this.coffee) this.coffee.update();
+    if (this.chair) this.chair.update();
+  }
 }
