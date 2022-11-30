@@ -11,7 +11,6 @@ export default class Camera {
 		// Setup
 		this.sizes = this.experience.sizes;
 		this.scene = this.experience.scene;
-		this.sceneCSS3D = this.experience.sceneCSS3D;
 		this.canvas = this.experience.canvas;
 
 		// Methods
@@ -27,7 +26,7 @@ export default class Camera {
 			100
 		);
 		this.instance.position.set(6, 4, 8);
-		this.scene.add(this.instance);		
+		this.scene.add(this.instance);
 	}
 
 	setOrbitControls() {
