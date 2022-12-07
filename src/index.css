@@ -22,3 +22,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.htmlScreen iframe {
+  width: 525px;
+  height: 240px;
+  border: none;
+  border-radius: 2px;
+  background: black;
+}
