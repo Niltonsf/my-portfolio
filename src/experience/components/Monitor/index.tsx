@@ -1,12 +1,31 @@
-import React from "react";
+import { Html } from "@react-three/drei";
+import * as THREE from "three";
 
-export default function Monitor({
-  geometry,
-
-  bakedTexture,
-}: any) {
+export default function Monitor({ geometry, screen, bakedTexture }: any) {
   return (
     <>
+      <primitive object={screen}>
+        <group position={[-2.57, 1.8, -0.01]} rotation-y={1.565}>
+          <Html
+            transform
+            prepend
+            wrapperClass="htmlScreen"
+            distanceFactor={1.17}
+            zIndexRange={[0, 0]}
+          >
+            <iframe src="https://bruno-simon.com/html/" />
+          </Html>
+          <mesh>
+            <planeGeometry args={[1.55, 0.71]} />
+            <meshPhysicalMaterial
+              blending={THREE.NoBlending}
+              opacity={0}
+              color={"black"}
+              side={THREE.DoubleSide}
+            />
+          </mesh>
+        </group>
+      </primitive>
       <mesh geometry={geometry}>
         <meshBasicMaterial map={bakedTexture} />
       </mesh>
