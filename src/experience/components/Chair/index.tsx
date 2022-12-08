@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { useGLTF, useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 export default function Chair({ geometry, bakedTexture }: any) {

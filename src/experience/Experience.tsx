@@ -1,36 +1,29 @@
 import { Suspense, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Html, useProgress } from "@react-three/drei";
+import { Environment, OrbitControls } from "@react-three/drei";
 import { Perf } from "r3f-perf";
 import Room from "./components/Room";
-import Chair from "./components/Chair";
 
-export default function Experience() {
-  function Loader() {
-    const data = useProgress();
-    useEffect(() => {
-      console.log(data.active, data.progress, data);
-    }, [data]);
-    return <Html center>{data.progress} % loaded</Html>;
-  }
-
+export default function Experience({ onCreated }: any) {
   return (
     <Canvas
+      eventSource={document.getElementById("root") as any}
       camera={{
         fov: 45,
         near: 0.1,
         far: 2000,
         position: [-3, 1.5, 4],
       }}
+      onCreated={onCreated}
     >
       <>
         <Perf position="top-left" />
 
+        <Environment preset="city" />
+
         <OrbitControls makeDefault />
 
-        <Suspense fallback={<Loader />}>
-          <Room />
-        </Suspense>
+        <Room />
       </>
     </Canvas>
   );
