@@ -4,6 +4,7 @@ import Monitor from "../Monitor";
 import StaticRoom from "../StaticRoom";
 
 export default function Room() {
+  // Loading models
   const { nodes }: any = useGLTF("./models/room/room.glb");
   const bakedTexture = useTexture("./models/room/baked.png");
   bakedTexture.flipY = false;
