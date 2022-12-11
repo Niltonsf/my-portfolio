@@ -1,6 +1,7 @@
 import { Html } from "@react-three/drei";
-
 import * as THREE from "three";
+import MainWebpage from "../../../webpage/main";
+import CustomIframe from "../CustomIframe";
 
 export default function Monitor({ geometry, screen, bakedTexture }: any) {
   return (
@@ -14,10 +15,13 @@ export default function Monitor({ geometry, screen, bakedTexture }: any) {
             distanceFactor={1.17}
             zIndexRange={[0, 0]}
           >
-            <iframe src="https://bruno-simon.com/html/" />
+            {/* <iframe src="https://bruno-simon.com/html/" /> */}
+            <CustomIframe>
+              <MainWebpage />
+            </CustomIframe>
           </Html>
           <mesh>
-            <planeGeometry args={[1.55, 0.71]} />
+            <planeGeometry args={[1.535, 0.69]} />
             <meshPhysicalMaterial
               blending={THREE.NoBlending}
               opacity={0}

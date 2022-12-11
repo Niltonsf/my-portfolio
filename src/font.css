@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "SFLight";
+  src: local("SF Webfont"),
+    url("./font/SF-Pro-Text-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "SFLightItalic";
+  src: local("SF Webfont"),
+    url("./font/SF-Pro-Text-LightItalic.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "SFMedium";
+  src: local("SF Webfont"),
+    url("./font/SF-Pro-Text-Medium.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "SFMediumItalic";
+  src: local("SF Webfont"),
+    url("./font/SF-Pro-Text-MediumItalic.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "SFRegular";
+  src: local("SF Webfont"),
+    url("./font/SF-Pro-Text-Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "SFRegularItalic";
+  src: local("SF Webfont"),
+    url("./font/SF-Pro-Text-RegularItalic.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "SFSemiBold";
+  src: local("SF Webfont"),
+    url("./font/SF-Pro-Text-Semibold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "SFSemiBoldItalic";
+  src: local("SF Webfont"),
+    url("./font/SF-Pro-Text-SemiboldItalic.otf") format("truetype");
+}
