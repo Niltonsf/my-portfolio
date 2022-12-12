@@ -17,7 +17,7 @@
 
 .home_social-icon {
   font-size: 1.25rem;
-  color: var(--title-colro);
+  color: var(--title-color);
 }
 
 .home_social-icon:hover {
@@ -59,7 +59,7 @@
 }
 
 .home_img {
-  background: url("../../../../assets/profile.jpg");
+  background: url("../../../assets/profile.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
