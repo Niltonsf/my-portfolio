@@ -1,0 +1,6 @@
+.max_height {
+  position: relative;
+  width: 1500px;
+  height: 700px;
+  overflow: scroll;
+}
