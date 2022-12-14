@@ -4,7 +4,7 @@ export default function Social() {
   return (
     <div className="home_social">
       <a
-        href="https://www.instagram.com"
+        href="https://www.instagram.com/niltonsf_"
         className="home_social-icon"
         target={"_blank"}
         rel="noreferrer"
@@ -13,12 +13,12 @@ export default function Social() {
       </a>
 
       <a
-        href="https://www.dribbble.com"
+        href="https://www.linkedin.com/in/nilton-ant%C3%B4nio-schumacher-filho-0ab77b183/"
         className="home_social-icon"
         target={"_blank"}
         rel="noreferrer"
       >
-        <i className="uil uil-dribbble"></i>
+        <i className="uil uil-linkedin"></i>
       </a>
 
       <a

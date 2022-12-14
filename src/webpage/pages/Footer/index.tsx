@@ -47,12 +47,30 @@ export default function Footer() {
 
         <div className="footer_social">
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/niltonsf_"
             className="footer_social-link"
             target={"_blank"}
             rel="noreferrer"
           >
-            <i className="bx bxl-instagram"></i>
+            <i className="uil uil-instagram"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/nilton-ant%C3%B4nio-schumacher-filho-0ab77b183/"
+            className="footer_social-link"
+            target={"_blank"}
+            rel="noreferrer"
+          >
+            <i className="uil uil-linkedin"></i>
+          </a>
+
+          <a
+            href="https://www.github.com/Niltonsf"
+            className="footer_social-link"
+            target={"_blank"}
+            rel="noreferrer"
+          >
+            <i className="uil uil-github-alt"></i>
           </a>
         </div>
 

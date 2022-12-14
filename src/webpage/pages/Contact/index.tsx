@@ -78,7 +78,9 @@ export default function Contact() {
               <i className="bx bx-mail-send contact_card-icon"></i>
 
               <h3 className="contact_card-title">Email</h3>
-              <span className="contact_card-data">user@gmail.com</span>
+              <span className="contact_card-data">
+                nilton.schumacher.filho@gmail.com
+              </span>
 
               <a
                 className="contact_button"
@@ -120,7 +122,7 @@ export default function Contact() {
                 type="text"
                 name="name"
                 className="contact_form-input"
-                placeholder="Insert your name"
+                placeholder="Your name"
               />
             </div>
 
@@ -130,7 +132,7 @@ export default function Contact() {
                 type="email"
                 name="email"
                 className="contact_form-input"
-                placeholder="Insert your email"
+                placeholder="Your email"
               />
             </div>
 
@@ -141,7 +143,7 @@ export default function Contact() {
                 cols={30}
                 rows={10}
                 className="contact_form-input"
-                placeholder="Write me"
+                placeholder="Your message 😀"
               ></textarea>
             </div>
             <button className="button button--flex">

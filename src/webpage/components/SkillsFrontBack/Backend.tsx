@@ -11,8 +11,8 @@ export default function BackendSkills() {
             <i className="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">PHP</h3>
-              <span className="skills_level">Basic</span>
+              <h3 className="skills_name">NodeJS</h3>
+              <span className="skills_level">Advanced</span>
             </div>
           </div>
 
@@ -21,7 +21,7 @@ export default function BackendSkills() {
 
             <div>
               <h3 className="skills_name">Firebase</h3>
-              <span className="skills_level">Advanced</span>
+              <span className="skills_level">Intermediate</span>
             </div>
           </div>
 
@@ -29,8 +29,8 @@ export default function BackendSkills() {
             <i className="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">MySQL</h3>
-              <span className="skills_level">Advanced</span>
+              <h3 className="skills_name">SQL</h3>
+              <span className="skills_level">Intermediate</span>
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@ export default function BackendSkills() {
 
             <div>
               <h3 className="skills_name">Python</h3>
-              <span className="skills_level">Intermediate</span>
+              <span className="skills_level">Basic</span>
             </div>
           </div>
 
@@ -49,8 +49,17 @@ export default function BackendSkills() {
             <i className="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">Git</h3>
+              <h3 className="skills_name">NestJS</h3>
               <span className="skills_level">Advanced</span>
+            </div>
+          </div>
+
+          <div className="skills_data">
+            <i className="bx bx-badge-check"></i>
+
+            <div>
+              <h3 className="skills_name">NoSQL</h3>
+              <span className="skills_level">Intermediate</span>
             </div>
           </div>
         </div>

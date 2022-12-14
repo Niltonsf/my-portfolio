@@ -36,6 +36,7 @@ canvas {
   --text-color: hsl(var(--hue), var(--sat), 46%);
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: #fff;
+  --light-blue: #0277bd;
 
   /*========== Font and typography ==========*/
   --body-font: "SFRegular", sans-serif;

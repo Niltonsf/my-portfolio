@@ -1,4 +1,3 @@
-import React from "react";
 import "./index.css";
 import AboutImg from "../../../assets/profile.jpg";
 import Info from "../../components/Info";
@@ -18,8 +17,11 @@ export default function About() {
           <Info />
 
           <p className="about_description">
-            I'm a creative designer based in Curitiba, and I'm very passionate
-            and dedicated to my work.
+            Developing and colaborating on a wide variety of projects for
+            companies. I have experience working with software-related projects
+            across several lines of business such as healthcare, entertainment,
+            IoT, ground transportation, and education. Always focusing on clean,
+            professional, responsive applications.
           </p>
 
           <div className="about_cv">

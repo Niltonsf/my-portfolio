@@ -57,8 +57,9 @@ export default function Data() {
       </h1>
       <h3 className="home_subtitle">Full Stack Developer</h3>
       <p className="home_description">
-        I'm a creative designer based in Curitiba, and I'm very passionate and
-        dedicated to my work.
+        I'm a Full Stack Developer based in Curitiba. I'm very passionate,
+        dedicated, helpful, grateful for all working enviroments and
+        opportunities.
       </p>
       <a href="#contact" className="button button--flex">
         Say Hello

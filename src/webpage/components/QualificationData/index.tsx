@@ -1,8 +1,11 @@
 export default function QualificationData({
   left,
   title,
-  subtitle,
+  company,
   calendar,
+  companyWebsite,
+  location,
+  state,
 }: any) {
   return (
     <>
@@ -16,7 +19,23 @@ export default function QualificationData({
           >
             <div>
               <h3 className="qualification_title">{title}</h3>
-              <span className="qualification_subtitle">{subtitle}</span>
+              <span className="qualification_subtitle">
+                Company:{" "}
+                <a
+                  href={companyWebsite}
+                  className="qualification_website"
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  {company}
+                </a>
+              </span>
+              <span className="qualification_subtitle">
+                Location: {location}
+              </span>
+              <span className="qualification_subtitle">
+                Contracted as: {state}
+              </span>
               <div className="qualification_calendar">
                 <i className="uil uil-calendar-alt"></i>
                 {calendar}
@@ -40,7 +59,21 @@ export default function QualificationData({
 
           <div>
             <h3 className="qualification_title">{title}</h3>
-            <span className="qualification_subtitle">{subtitle}</span>
+            <span className="qualification_subtitle">
+              Company:{" "}
+              <a
+                href={companyWebsite}
+                className="qualification_website"
+                target={"_blank"}
+                rel="noreferrer"
+              >
+                {company}
+              </a>
+            </span>
+            <span className="qualification_subtitle">Location: {location}</span>
+            <span className="qualification_subtitle">
+              Contracted as: {state}
+            </span>
             <div className="qualification_calendar">
               <i className="uil uil-calendar-alt"></i>
               {calendar}

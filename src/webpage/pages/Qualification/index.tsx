@@ -24,41 +24,31 @@ export default function Qualification() {
           <div className="qualification_content qualification_content-active">
             <QualificationData
               left={true}
-              title={"Web Design"}
-              subtitle={"Spain - Institute"}
-              calendar={"2021 - Present"}
+              title={"Midlevel React Native Developer"}
+              location={"Curitiba/Brazil as 100% remote"}
+              company={"Univision"}
+              companyWebsite={"https://univision.net.br/"}
+              state={"Employee"}
+              calendar={"dezember 2022 - Present"}
             />
 
             <QualificationData
-              title={"Art Director"}
-              subtitle={"Spain - Institute"}
-              calendar={"2021 - Present"}
-            />
-
-            <QualificationData
-              left={true}
-              title={"Web Developer"}
-              subtitle={"Spain - Institute"}
-              calendar={"2021 - 2021"}
-            />
-
-            <QualificationData
-              title={"UX Design"}
-              subtitle={"Spain - Institute"}
-              calendar={"2017 - 2018"}
+              title={"Junior Full Stack Developer"}
+              location={"London/England as 100% remote"}
+              company={"Crowdform"}
+              companyWebsite={"https://crowdform.studio/"}
+              state={"Freelancer"}
+              calendar={"october 2021 - dezember 2022"}
             />
 
             <QualificationData
               left={true}
-              title={"Web Developer"}
-              subtitle={"Spain - Institute"}
-              calendar={"2021 - 2021"}
-            />
-
-            <QualificationData
-              title={"UX Design"}
-              subtitle={"Spain - Institute"}
-              calendar={"2017 - 2018"}
+              title={"Computer Engineer Internship"}
+              location={"Curitiba/Brazil as 50% remote and 50% physical"}
+              company={"Alta Rail Technology"}
+              companyWebsite={"https://alta-rt.com/pt-br/"}
+              state={"Employee"}
+              calendar={"april 2021 - october 2021"}
             />
           </div>
         </div>

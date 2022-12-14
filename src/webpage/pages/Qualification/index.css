@@ -58,11 +58,18 @@
 .qualification_subtitle {
   display: inline-block;
   font-size: var(--small-font-size);
-  margin-bottom: var(--mb-1);
+  margin-bottom: 5px;
 }
 
 .qualification_calendar {
   font-size: var(--small-font-size);
+}
+
+.qualification_website {
+  font-size: var(--small-font-size);
+  color: var(--light-blue);
+  font-family: "SFMedium";
+  transition: 0.3s;
 }
 
 .qualification_rounder {

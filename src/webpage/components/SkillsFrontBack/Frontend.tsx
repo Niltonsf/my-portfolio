@@ -12,7 +12,7 @@ export default function FrontendSkills() {
 
             <div>
               <h3 className="skills_name">HTML</h3>
-              <span className="skills_level">Basic</span>
+              <span className="skills_level">Advanced</span>
             </div>
           </div>
 
@@ -33,6 +33,15 @@ export default function FrontendSkills() {
               <span className="skills_level">Advanced</span>
             </div>
           </div>
+
+          <div className="skills_data">
+            <i className="bx bx-badge-check"></i>
+
+            <div>
+              <h3 className="skills_name">Typescript</h3>
+              <span className="skills_level">Advanced</span>
+            </div>
+          </div>
         </div>
 
         <div className="skills_group">
@@ -40,16 +49,7 @@ export default function FrontendSkills() {
             <i className="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">Bootstrap</h3>
-              <span className="skills_level">Intermediate</span>
-            </div>
-          </div>
-
-          <div className="skills_data">
-            <i className="bx bx-badge-check"></i>
-
-            <div>
-              <h3 className="skills_name">Git</h3>
+              <h3 className="skills_name">React</h3>
               <span className="skills_level">Advanced</span>
             </div>
           </div>
@@ -58,7 +58,16 @@ export default function FrontendSkills() {
             <i className="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">React</h3>
+              <h3 className="skills_name">React Native</h3>
+              <span className="skills_level">Advanced</span>
+            </div>
+          </div>
+
+          <div className="skills_data">
+            <i className="bx bx-badge-check"></i>
+
+            <div>
+              <h3 className="skills_name">Git</h3>
               <span className="skills_level">Advanced</span>
             </div>
           </div>
