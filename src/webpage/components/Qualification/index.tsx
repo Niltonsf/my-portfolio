@@ -96,6 +96,19 @@ export default function Qualification() {
               subtitle={"Spain - Institute"}
               calendar={"2017 - 2018"}
             />
+
+            <QualificationData
+              left={true}
+              title={"Web Developer"}
+              subtitle={"Spain - Institute"}
+              calendar={"2021 - 2021"}
+            />
+
+            <QualificationData
+              title={"UX Design"}
+              subtitle={"Spain - Institute"}
+              calendar={"2017 - 2018"}
+            />
           </div>
         </div>
       </div>
