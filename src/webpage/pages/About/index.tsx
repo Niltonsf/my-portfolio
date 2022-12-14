@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import AboutImg from "../../../assets/profile.jpg";
-import Info from "../Info";
+import Info from "../../components/Info";
 import CVEn from "../../../assets/CV-Nilton-EN.pdf";
 import CVPt from "../../../assets/CV-Nilton-PT.pdf";
 

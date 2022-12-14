@@ -1,6 +1,5 @@
-import React from "react";
 import "./index.css";
-import Works from "./Works";
+import Works from "../../components/Works";
 
 export default function Projects() {
   return (

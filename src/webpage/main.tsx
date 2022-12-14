@@ -1,12 +1,12 @@
-import React from "react";
 import "./main.css";
-import About from "./components/About";
+import About from "./pages/About";
 import Header from "./components/Header";
-import Home from "./components/Home";
-import Skills from "./components/Skills";
-import Qualification from "./components/Qualification";
+import Home from "./pages/Home";
+import Skills from "./pages/Skills";
+import Qualification from "./pages/Qualification";
 import Footer from "./components/Footer";
-import Projects from "./components/Projects";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 
 export default function MainWebpage() {
   return (
@@ -20,6 +20,7 @@ export default function MainWebpage() {
         <Skills />
         <Qualification />
         <Projects />
+        <Contact />
         <Footer />
       </div>
     </div>

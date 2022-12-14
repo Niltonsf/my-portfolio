@@ -1,8 +1,8 @@
 import React from "react";
 import "./index.css";
-import Social from "../Social";
-import Data from "../Data";
-import ScrollDown from "../ScrollDown";
+import Social from "../../components/Social";
+import Data from "../../components/Data";
+import ScrollDown from "../../components/ScrollDown";
 
 export default function Home() {
   return (

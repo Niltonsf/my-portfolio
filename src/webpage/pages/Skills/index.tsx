@@ -1,6 +1,6 @@
 import React from "react";
-import BakendSkills from "./Backend";
-import FrontendSkills from "./Frontend";
+import BackendSkills from "../../components/SkillsFrontBack/Backend";
+import FrontendSkills from "../../components/SkillsFrontBack/Frontend";
 import "./index.css";
 
 export default function Skills() {
@@ -11,7 +11,7 @@ export default function Skills() {
 
       <div className="skills_container container grid">
         <FrontendSkills />
-        <BakendSkills />
+        <BackendSkills />
       </div>
     </section>
   );

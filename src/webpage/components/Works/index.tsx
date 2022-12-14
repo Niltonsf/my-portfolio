@@ -1,14 +1,7 @@
-import React, { SetStateAction, useEffect, useState } from "react";
-import "./index.css";
-import { projectsData, projectsNav } from "./Data";
-import WorkItem from "./WorkItem";
+import { useEffect, useState } from "react";
+import { projectsData, projectsNav } from "../../utils/ProjectsData";
+import WorkItem from "../WorkItem";
 
-interface ProjectsProps {
-  id: string;
-  image: string;
-  title: string;
-  category: string;
-}
 export default function Works() {
   const [item, setItem] = useState({ name: "all" });
   const [projects, setProjects] = useState<any>([]);
