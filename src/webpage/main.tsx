@@ -1,12 +1,13 @@
 import "./main.css";
 import About from "./pages/About";
-import Header from "./components/Header";
+import Header from "./pages/Header";
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
 import Qualification from "./pages/Qualification";
-import Footer from "./components/Footer";
+import Footer from "./pages/Footer";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import ScrollUp from "./pages/ScrollUp";
 
 export default function MainWebpage() {
   return (
@@ -23,6 +24,8 @@ export default function MainWebpage() {
         <Contact />
         <Footer />
       </div>
+
+      <ScrollUp />
     </div>
   );
 }

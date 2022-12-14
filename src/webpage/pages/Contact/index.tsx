@@ -65,7 +65,7 @@ export default function Contact() {
 
   useEffect(() => {}, []);
   return (
-    <section className="contact section" id="section">
+    <section className="contact section" id="contact">
       <div className="section__title">Get in touch</div>
       <span className="section__subtitle">Contact Me</span>
 

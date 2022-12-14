@@ -30,6 +30,12 @@ export default function Header() {
               </a>
             </li>
             <li className="nav_item">
+              <a href="#qualification" className="nav_link">
+                <i className="uil uil-scenery nav_icon"></i>
+                Qualification
+              </a>
+            </li>
+            <li className="nav_item">
               <a href="#portfolio" className="nav_link">
                 <i className="uil uil-scenery nav_icon"></i>
                 Portfolio
