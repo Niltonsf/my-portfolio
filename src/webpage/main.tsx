@@ -12,7 +12,7 @@ import ScrollUp from "./pages/ScrollUp";
 export default function MainWebpage() {
   return (
     // className="max_height"
-    <div>
+    <div className="max_height hide">
       <Header />
 
       <div className="main">

@@ -5,9 +5,7 @@ export default function Header() {
   return (
     <div className="header">
       <nav className="nav container">
-        <a href="index.html" className="nav_logo">
-          Nilton
-        </a>
+        <span className="nav_logo">Nilton A Schumacher F</span>
 
         <div className="nav_menu">
           <ul className="nav_list">

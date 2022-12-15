@@ -37,8 +37,7 @@ export default function QualificationData({
                 Contracted as: {state}
               </span>
               <div className="qualification_calendar">
-                <i className="uil uil-calendar-alt"></i>
-                {calendar}
+                <i className="uil uil-calendar-alt"></i> {calendar}
               </div>
             </div>
           </div>
@@ -75,8 +74,7 @@ export default function QualificationData({
               Contracted as: {state}
             </span>
             <div className="qualification_calendar">
-              <i className="uil uil-calendar-alt"></i>
-              {calendar}
+              <i className="uil uil-calendar-alt"></i> {calendar}
             </div>
           </div>
         </div>
