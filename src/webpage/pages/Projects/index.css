@@ -32,6 +32,7 @@
 }
 
 .work_card {
+  width: 300px;
   background-color: var(--container-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1.25rem;
@@ -40,6 +41,8 @@
 
 .work_img {
   width: 295px;
+  height: 160px;
+  object-fit: contain;
   border-radius: 1rem;
   margin-bottom: var(--mb-1);
 }
@@ -50,10 +53,21 @@
   margin-bottom: var(--mb-0-5);
 }
 
+.work_subtitle {
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+
+.work_difficulty {
+  font-size: var(--smaller-font-size);
+  margin-top: var(--mb-0-5);
+}
+
 .work_button {
   color: var(--text-color);
   font-size: var(--small-font-size);
   display: flex;
+  margin-top: var(--mb-0-5);
   align-items: center;
   column-gap: 0.25rem;
 }
