@@ -1,7 +1,6 @@
 import { Html } from "@react-three/drei";
 import * as THREE from "three";
 import MainWebpage from "../../../webpage/main";
-import CustomIframe from "../CustomIframe";
 
 export default function Monitor({ geometry, screen, bakedTexture }: any) {
   return (

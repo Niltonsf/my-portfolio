@@ -10,6 +10,10 @@ body,
   scroll-behavior: smooth;
 }
 
+.max_height {
+  scroll-behavior: smooth;
+}
+
 canvas {
   touch-action: none;
 }
