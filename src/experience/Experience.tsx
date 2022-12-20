@@ -13,7 +13,6 @@ import gsap from "gsap";
 export default function Experience() {
   const orbitControlsRef = useRef<any>();
   const invisibleObjectRef = useRef<any>();
-  const { camera } = useThree();
   const { focusOnHtml } = useControls({
     focusOnHtml: {
       value: false,
@@ -45,8 +44,19 @@ export default function Experience() {
       orbitControlsRef.current.enableZoom = true;
     } else {
       orbitControlsRef.current.enableRotate = true;
-      orbitControlsRef.current.reset();
-      orbitControlsRef.current.target.set(0, 1, 0);
+      gsap.to(orbitControlsRef.current.object.position, {
+        x: 3.9,
+        y: 3.5,
+        z: 6,
+        duration: 1.3,
+      });
+      gsap.to(orbitControlsRef.current.target, {
+        duration: 1,
+        ease: "power1.inOut",
+        x: 0,
+        y: 1,
+        z: 0,
+      });
     }
   }, [focusOnHtml]);
 
@@ -59,10 +69,15 @@ export default function Experience() {
       <Perf position="top-left" />
 
       <OrbitControls
-        ref={orbitControlsRef}
         makeDefault
+        ref={orbitControlsRef}
         target={[0, 1, 0]}
         enabled={!focusOnHtml}
+        minPolarAngle={0}
+        maxPolarAngle={Math.PI / 1.9}
+        maxAzimuthAngle={Math.PI / 1.65}
+        minAzimuthAngle={Math.PI * 1.9}
+        // zoomSpeed={0.25}
       />
 
       <ObjectForReference
