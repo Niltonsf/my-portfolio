@@ -23,6 +23,7 @@ export default function Experience() {
   const sleep = async (ms: number) =>
     new Promise((resolve) => setTimeout(resolve, ms));
 
+  // Logic for focusing on the monitor screen with the html
   useEffect(() => {
     if (focusOnHtml) {
       orbitControlsRef.current.enableRotate = false;

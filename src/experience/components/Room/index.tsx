@@ -1,11 +1,12 @@
 import { useGLTF, useTexture } from "@react-three/drei";
 import Chair from "../Chair";
+import Macbook from "../Macbook";
 import Monitor from "../Monitor";
 import StaticRoom from "../StaticRoom";
 
 export default function Room() {
   // Loading models
-  const { nodes }: any = useGLTF("./models/room/room1.glb");
+  const { nodes }: any = useGLTF("./models/room/room.glb");
   const bakedTexture = useTexture("./models/room/baked.png");
   bakedTexture.flipY = false;
 
@@ -18,6 +19,7 @@ export default function Room() {
         screen={nodes.screen}
         bakedTexture={bakedTexture}
       />
+      <Macbook geometry={nodes.macbook.geometry} bakedTexture={bakedTexture} />
     </>
   );
 }
