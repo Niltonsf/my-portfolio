@@ -1,6 +1,11 @@
 import { useRef } from "react";
 
-export default function Macbook({ geometry, bakedTexture }: any) {
+interface MacbookProps {
+  geometry: THREE.BufferGeometry;
+  bakedTexture: THREE.Texture;
+}
+
+export default function Macbook({ geometry, bakedTexture }: MacbookProps) {
   const chairRef = useRef<any>();
 
   return (

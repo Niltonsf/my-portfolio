@@ -1,7 +1,13 @@
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
+import * as THREE from "three";
 
-export default function Chair({ geometry, bakedTexture }: any) {
+interface ChairProps {
+  geometry: THREE.BufferGeometry;
+  bakedTexture: THREE.Texture;
+}
+
+export default function Chair({ geometry, bakedTexture }: ChairProps) {
   const chairRef = useRef<any>();
 
   useFrame((state, delta) => {

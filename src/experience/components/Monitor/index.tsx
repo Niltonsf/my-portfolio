@@ -1,6 +1,15 @@
 import { Html } from "@react-three/drei";
+import { Dispatch, SetStateAction } from "react";
 import * as THREE from "three";
 import MainWebpage from "../../../webpage/main";
+
+interface MonitorProps {
+  geometry: THREE.BufferGeometry;
+  screen: THREE.Mesh;
+  bakedTexture: THREE.Texture;
+  setIsPointerOnHtml: Dispatch<SetStateAction<boolean>>;
+  isFocusOnHtml: boolean;
+}
 
 export default function Monitor({
   geometry,
@@ -8,7 +17,7 @@ export default function Monitor({
   bakedTexture,
   setIsPointerOnHtml,
   isFocusOnHtml,
-}: any) {
+}: MonitorProps) {
   return (
     <>
       <primitive object={screen}>

@@ -1,10 +1,16 @@
 import { useGLTF, useTexture } from "@react-three/drei";
+import { Dispatch, SetStateAction } from "react";
 import Chair from "../Chair";
 import Macbook from "../Macbook";
 import Monitor from "../Monitor";
 import StaticRoom from "../StaticRoom";
 
-export default function Room({ setIsPointerOnHtml, isFocusOnHtml }: any) {
+interface RoomProps {
+  setIsPointerOnHtml: Dispatch<SetStateAction<boolean>>;
+  isFocusOnHtml: boolean;
+}
+
+export default function Room({ setIsPointerOnHtml, isFocusOnHtml }: RoomProps) {
   // Loading models
   const { nodes }: any = useGLTF("./models/room/room.glb");
   const bakedTexture = useTexture("./models/room/baked.png");
