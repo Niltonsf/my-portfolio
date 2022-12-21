@@ -24,13 +24,17 @@ export default function Monitor({
         <group position={[-2.57, 1.8, -0.01]} rotation-y={1.565}>
           <Html
             transform
+            prepend
             scale={0.35}
             wrapperClass="htmlScreen"
             distanceFactor={1.17}
             zIndexRange={[0, 0]}
           >
             <div
-              onPointerEnter={() => {
+              onClick={(e) => {
+                if (!isFocusOnHtml) e.preventDefault();
+              }}
+              onPointerEnter={(e) => {
                 if (isFocusOnHtml) setIsPointerOnHtml(true);
               }}
               onPointerLeave={() => {

@@ -11,7 +11,6 @@ import ScrollUp from "./pages/ScrollUp";
 
 export default function MainWebpage() {
   return (
-    // className="max_height"
     <div className="max_height">
       <Header />
 
