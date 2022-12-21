@@ -4,7 +4,7 @@ import Macbook from "../Macbook";
 import Monitor from "../Monitor";
 import StaticRoom from "../StaticRoom";
 
-export default function Room() {
+export default function Room({ setIsPointerOnHtml, isFocusOnHtml }: any) {
   // Loading models
   const { nodes }: any = useGLTF("./models/room/room.glb");
   const bakedTexture = useTexture("./models/room/baked.png");
@@ -18,6 +18,8 @@ export default function Room() {
         geometry={nodes.monitor.geometry}
         screen={nodes.screen}
         bakedTexture={bakedTexture}
+        setIsPointerOnHtml={setIsPointerOnHtml}
+        isFocusOnHtml={isFocusOnHtml}
       />
       <Macbook geometry={nodes.macbook.geometry} bakedTexture={bakedTexture} />
     </>
