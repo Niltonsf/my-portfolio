@@ -50,13 +50,13 @@ export default function OrbitControls({
       ref={orbitControlsRef as any}
       makeDefault
       target={[0, 1, 0]}
-      // minPolarAngle={0}
-      // maxPolarAngle={Math.PI / 1.9}
-      // maxAzimuthAngle={Math.PI / 1.65}
-      // minAzimuthAngle={Math.PI * 1.9}
-      // rotateSpeed={0.15}
-      // dampingFactor={0.03}
-      // zoomSpeed={0.25}
+      minPolarAngle={0}
+      maxPolarAngle={Math.PI / 1.9}
+      maxAzimuthAngle={Math.PI / 1.65}
+      minAzimuthAngle={Math.PI * 1.9}
+      rotateSpeed={0.15}
+      dampingFactor={0.03}
+      zoomSpeed={0.25}
     />
   );
 }
