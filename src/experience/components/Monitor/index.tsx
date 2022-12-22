@@ -25,8 +25,8 @@ export default function Monitor({
           <Html
             transform
             prepend
-            scale={0.35}
             wrapperClass="htmlScreen"
+            scale={0.35}
             distanceFactor={1.17}
             zIndexRange={[0, 0]}
           >

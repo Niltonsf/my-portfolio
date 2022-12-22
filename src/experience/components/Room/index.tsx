@@ -1,6 +1,7 @@
 import { useGLTF, useTexture } from "@react-three/drei";
 import { Dispatch, SetStateAction } from "react";
 import Chair from "../Chair";
+import Floor from "../Floor";
 import Macbook from "../Macbook";
 import Monitor from "../Monitor";
 import StaticRoom from "../StaticRoom";
@@ -28,6 +29,7 @@ export default function Room({ setIsPointerOnHtml, isFocusOnHtml }: RoomProps) {
         isFocusOnHtml={isFocusOnHtml}
       />
       <Macbook geometry={nodes.macbook.geometry} bakedTexture={bakedTexture} />
+      <Floor geometry={nodes.Floor.geometry} bakedTexture={bakedTexture} />
     </>
   );
 }

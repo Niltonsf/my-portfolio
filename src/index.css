@@ -17,14 +17,6 @@ canvas {
   touch-action: none;
 }
 
-.htmlScreen iframe {
-  width: 525px;
-  height: 240px;
-  border: none;
-  border-radius: 2px;
-  background: black;
-}
-
 /* New */
 
 /*=============== VARIABLES CSS ===============*/

@@ -17,7 +17,7 @@ export default function Experience() {
 
   return (
     <>
-      <color args={["#B2BEB5"]} attach="background" />
+      <color args={["#2E282A"]} attach="background" />
 
       <Perf position="top-left" />
 
