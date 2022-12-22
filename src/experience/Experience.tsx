@@ -1,4 +1,4 @@
-import { MutableRefObject, Ref, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import OrbitControls from "./components/OrbitControls";
 import { Perf } from "r3f-perf";
 import { useControls } from "leva";
