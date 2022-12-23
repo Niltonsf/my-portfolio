@@ -1,7 +1,6 @@
 import { Html } from "@react-three/drei";
 import { Dispatch, SetStateAction } from "react";
 import * as THREE from "three";
-import MainWebpage from "../../../webpage/main";
 
 interface MonitorProps {
   geometry: THREE.BufferGeometry;
@@ -41,7 +40,7 @@ export default function Monitor({
                 if (isFocusOnHtml) setIsPointerOnHtml(false);
               }}
             >
-              <MainWebpage />
+              <iframe src="https://niltonsf.dev" />
             </div>
           </Html>
 
