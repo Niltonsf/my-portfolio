@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import MainExperience from "./experience/main";
 import "./index.css";
 import "./font.css";
+import MainWebpage from "./webpage/main";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -10,6 +10,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <MainExperience />
+    <MainWebpage />
   </React.StrictMode>
 );
