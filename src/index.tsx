@@ -3,12 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import "./font.css";
 import MainExperience from "./experience/main";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainWebpage from "./webpage/main";
 
 const router = createBrowserRouter([

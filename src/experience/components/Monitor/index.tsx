@@ -40,7 +40,7 @@ export default function Monitor({
                 if (isFocusOnHtml) setIsPointerOnHtml(false);
               }}
             >
-              <iframe src="https://niltonsf.dev" />
+              <iframe src="https://niltonsf.dev" title="myStaticWebsite" />
             </div>
           </Html>
 
