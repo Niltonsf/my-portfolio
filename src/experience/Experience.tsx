@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import OrbitControls from "./components/OrbitControls";
 import { Perf } from "r3f-perf";
-import { useControls } from "leva";
 import { ObjectForReference } from "./components/ObjectForReference";
 import * as THREE from "three";
 import Room from "./components/Room";
