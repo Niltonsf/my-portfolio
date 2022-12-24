@@ -41,6 +41,16 @@ export default function OrbitControls({
     });
   }, [isPointerOnHtml, isAnimationOnHtmlFinished]);
 
+  useEffect(() => {
+    window.addEventListener(
+      "wheel",
+      (e) => {
+        e.preventDefault();
+      },
+      { passive: false }
+    );
+  }, []);
+
   useFrame(() => {
     orbitControlsRef!.current!.update();
   });
