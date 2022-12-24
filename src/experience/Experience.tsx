@@ -5,26 +5,23 @@ import { useControls } from "leva";
 import { ObjectForReference } from "./components/ObjectForReference";
 import * as THREE from "three";
 import Room from "./components/Room";
+import useLevaControls from "./hook/useLevaControls";
 
 export default function Experience() {
   const invisibleObjectRef = useRef<THREE.Mesh | null>(null);
   const [isPointerOnHtml, setIsPointerOnHtml] = useState<boolean>(false);
-  const { focusOnHtml } = useControls({
-    focusOnHtml: {
-      value: false,
-    },
-  });
+  const { viewWebpage, showPerformace } = useLevaControls();
 
   return (
     <>
       <color args={["#2E282A"]} attach="background" />
 
-      <Perf position="top-left" />
+      {showPerformace && <Perf position="top-left" />}
 
       <OrbitControls
         invisibleObjectRef={invisibleObjectRef}
         isPointerOnHtml={isPointerOnHtml}
-        focusOnHtml={focusOnHtml}
+        focusOnHtml={viewWebpage}
       />
 
       <ObjectForReference
@@ -34,7 +31,7 @@ export default function Experience() {
 
       <Room
         setIsPointerOnHtml={setIsPointerOnHtml}
-        isFocusOnHtml={focusOnHtml}
+        isFocusOnHtml={viewWebpage}
       />
     </>
   );

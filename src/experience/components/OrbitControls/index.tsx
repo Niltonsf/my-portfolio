@@ -1,4 +1,5 @@
 import { RefObject, useEffect, useRef, useState } from "react";
+import * as THREE from "three";
 import * as DREI from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import {
@@ -41,6 +42,8 @@ export default function OrbitControls({
     });
   }, [isPointerOnHtml, isAnimationOnHtmlFinished]);
 
+  useEffect(() => {}, []);
+
   useFrame(() => {
     orbitControlsRef!.current!.update();
   });
@@ -55,6 +58,7 @@ export default function OrbitControls({
       maxAzimuthAngle={Math.PI / 1.65}
       minAzimuthAngle={Math.PI * 1.9}
       rotateSpeed={0.15}
+      enablePan={false}
       dampingFactor={0.03}
       zoomSpeed={0.25}
     />
