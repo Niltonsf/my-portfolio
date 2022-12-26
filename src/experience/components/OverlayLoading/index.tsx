@@ -19,7 +19,7 @@ export default function OverlayLoading({
   useEffect(() => {
     setHiddenLeva(true);
     setOrbitControlsDisabled(false);
-  }, []);
+  }, [setHiddenLeva, setOrbitControlsDisabled]);
 
   return (
     <>
