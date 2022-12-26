@@ -12,12 +12,14 @@ interface OrbitControlsProps {
   invisibleObjectRef: RefObject<THREE.Mesh | null>;
   isPointerOnHtml: boolean;
   focusOnHtml: boolean;
+  disabled: boolean;
 }
 
 export default function OrbitControls({
   invisibleObjectRef,
   isPointerOnHtml,
   focusOnHtml,
+  disabled,
 }: OrbitControlsProps) {
   const orbitControlsRef = useRef<OrbitControlsExtendedProps | null>(null);
   const [isAnimationOnHtmlFinished, setAnimationOnHtmlFinished] =
@@ -61,6 +63,7 @@ export default function OrbitControls({
       enablePan={false}
       dampingFactor={0.03}
       zoomSpeed={0.25}
+      enabled={disabled}
     />
   );
 }

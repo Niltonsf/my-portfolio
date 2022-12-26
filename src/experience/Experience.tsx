@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { Dispatch, SetStateAction, useRef, useState } from "react";
 import OrbitControls from "./components/OrbitControls";
 import { Perf } from "r3f-perf";
 import { ObjectForReference } from "./components/ObjectForReference";
@@ -6,8 +6,14 @@ import * as THREE from "three";
 import Room from "./components/Room";
 import useLevaControls from "./hook/useLevaControls";
 
-export default function Experience() {
+interface ExperienceProps {
+  setHiddenLeva: Dispatch<SetStateAction<boolean>>;
+}
+
+export default function Experience({ setHiddenLeva }: ExperienceProps) {
   const invisibleObjectRef = useRef<THREE.Mesh | null>(null);
+  const [orbitControlsDisabled, setOrbitControlsDisabled] =
+    useState<boolean>(false);
   const [isPointerOnHtml, setIsPointerOnHtml] = useState<boolean>(false);
   const { viewWebpage, showPerformace } = useLevaControls();
 
@@ -21,6 +27,7 @@ export default function Experience() {
         invisibleObjectRef={invisibleObjectRef}
         isPointerOnHtml={isPointerOnHtml}
         focusOnHtml={viewWebpage}
+        disabled={orbitControlsDisabled}
       />
 
       <ObjectForReference
@@ -31,6 +38,8 @@ export default function Experience() {
       <Room
         setIsPointerOnHtml={setIsPointerOnHtml}
         isFocusOnHtml={viewWebpage}
+        setOrbitControlsDisabled={setOrbitControlsDisabled}
+        setHiddenLeva={setHiddenLeva}
       />
     </>
   );

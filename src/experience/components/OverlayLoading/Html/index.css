@@ -1,0 +1,40 @@
+.commonHtml {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.introText {
+  color: #a9a9a9;
+  font-size: 20px;
+  font-family: "SFMedium";
+}
+
+.localHtml {
+  display: flex;
+  margin-top: -110px;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.progressBar {
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: 20px;
+  border-radius: 10px;
+  padding: 1px;
+  background: #a9a9a9;
+}
+
+.progressPercent {
+  position: absolute;
+  color: #fff;
+  left: 50%;
+  top: 3px;
+  transform: translate(-15px, 0px);
+}
