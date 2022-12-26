@@ -36,7 +36,13 @@ export default function HtmlOverlay({
           />
         );
     }
-  }, [presentationScreens]);
+  }, [
+    planeMeshRef,
+    presentationScreens,
+    setHiddenLeva,
+    setHideOverlay,
+    setOrbitControlsDisabled,
+  ]);
 
   return (
     <Html fullscreen className="htmlComponent">

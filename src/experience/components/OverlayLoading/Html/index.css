@@ -27,8 +27,8 @@
   width: 400px;
   height: 20px;
   border-radius: 10px;
-  padding: 1px;
-  background: #a9a9a9;
+
+  background: #3d3d3d;
 }
 
 .progressPercent {
@@ -37,4 +37,24 @@
   left: 50%;
   top: 3px;
   transform: translate(-15px, 0px);
+}
+
+.finalText {
+  cursor: pointer;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+}
+
+.finalText:before {
+  content: attr(data-text);
+  position: absolute;
+  color: #fff;
+  width: 0;
+  overflow: hidden;
+  transition: 2s;
+}
+
+.finalText:hover::before {
+  width: 100%;
 }

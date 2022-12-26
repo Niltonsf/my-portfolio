@@ -20,26 +20,24 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
         });
       }, 1000);
     }
-  }, [progress]);
+  }, [progress, setPresentationScreens]);
 
   return (
     <div className="localHtml opacityControl">
       <div className="commonHtml">
-        {/* Loading text and dots */}
         <div style={{ marginBottom: 20 }}>
           <span className="introText">We are loading your experience</span>
         </div>
-        {/* Progress bar */}
+
         <div className="progressBar">
           <div
             style={{
               height: "100%",
               borderRadius: 10,
               width: `${progress}%`,
-              backgroundColor: "#32527b",
+              backgroundColor: "#0061FF",
             }}
           ></div>
-          <span className="progressPercent">{progress} %</span>
         </div>
       </div>
     </div>

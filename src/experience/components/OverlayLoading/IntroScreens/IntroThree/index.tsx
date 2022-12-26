@@ -14,39 +14,43 @@ export default function IntroThree({
   setOrbitControlsDisabled,
   planeMeshRef,
 }: IntroThreeProps) {
+  const handleIntroFinish = () => {
+    setTimeout(() => {
+      gsap.to(".htmlComponent", {
+        opacity: 0,
+        onComplete: () => {
+          gsap.to(planeMeshRef.current.material.uniforms.uAlpha, {
+            value: 0,
+            onComplete: () => {
+              setHideOverlay(true);
+              setHiddenLeva(false);
+              setOrbitControlsDisabled(true);
+            },
+          });
+        },
+      });
+    }, 1500);
+  };
   useEffect(() => {
     setTimeout(() => {
       gsap.to(".introText", {
         opacity: 1,
-        onComplete: () => {
-          setTimeout(() => {
-            gsap.to(".htmlComponent", {
-              opacity: 0,
-              onComplete: () => {
-                gsap.to(planeMeshRef.current.material.uniforms.uAlpha, {
-                  value: 0,
-                  onComplete: () => {
-                    setHideOverlay(true);
-                    setHiddenLeva(false);
-                    setOrbitControlsDisabled(true);
-                  },
-                });
-              },
-            });
-          }, 1500);
-        },
+        onComplete: () => {},
       });
     }, 500);
-  }, []);
+  }, [planeMeshRef, setHiddenLeva, setHideOverlay, setOrbitControlsDisabled]);
 
   return (
     <div className="localHtml">
       <div className="commonHtml">
         <span
-          className="introText"
+          className="introText finalText"
+          onClick={handleIntroFinish}
           style={{
             opacity: 0,
+            fontSize: 70,
           }}
+          data-text="Start"
         >
           Start
         </span>

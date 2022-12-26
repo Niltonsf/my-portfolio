@@ -22,15 +22,17 @@ export default function IntroTwo({ setPresentationScreens }: IntroTwoProps) {
         },
       });
     }, 500);
-  }, []);
+  }, [setPresentationScreens]);
 
   return (
     <div className="localHtml">
       <div className="commonHtml">
         <span
-          className="introText"
+          className="introText finalText"
           style={{
             opacity: 0,
+            fontSize: 70,
+            cursor: "default",
           }}
         >
           Loaded

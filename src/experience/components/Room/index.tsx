@@ -1,5 +1,5 @@
 import { useGLTF, useTexture } from "@react-three/drei";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction, Suspense, useState } from "react";
 import Chair from "../Chair";
 import Floor from "../Floor";
 import Macbook from "../Macbook";
@@ -37,17 +37,25 @@ export default function Room({
           setHideOverlay={setHideOverlay}
         />
       )}
-      <StaticRoom geometry={nodes.room.geometry} bakedTexture={bakedTexture} />
-      <Chair geometry={nodes.chair.geometry} bakedTexture={bakedTexture} />
-      <Monitor
-        geometry={nodes.monitor.geometry}
-        screen={nodes.screen}
-        bakedTexture={bakedTexture}
-        setIsPointerOnHtml={setIsPointerOnHtml}
-        isFocusOnHtml={isFocusOnHtml}
-      />
-      <Macbook geometry={nodes.macbook.geometry} bakedTexture={bakedTexture} />
-      <Floor geometry={nodes.Floor.geometry} bakedTexture={bakedTexture} />
+      <Suspense>
+        <StaticRoom
+          geometry={nodes.room.geometry}
+          bakedTexture={bakedTexture}
+        />
+        <Chair geometry={nodes.chair.geometry} bakedTexture={bakedTexture} />
+        <Monitor
+          geometry={nodes.monitor.geometry}
+          screen={nodes.screen}
+          bakedTexture={bakedTexture}
+          setIsPointerOnHtml={setIsPointerOnHtml}
+          isFocusOnHtml={isFocusOnHtml}
+        />
+        <Macbook
+          geometry={nodes.macbook.geometry}
+          bakedTexture={bakedTexture}
+        />
+        <Floor geometry={nodes.Floor.geometry} bakedTexture={bakedTexture} />
+      </Suspense>
     </>
   );
 }
