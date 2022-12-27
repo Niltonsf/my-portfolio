@@ -1,8 +1,8 @@
 import "./index.css";
 import AboutImg from "../../../assets/profile.jpg";
 import Info from "../../components/Info";
-import CVEn from "../../../assets/CV-Nilton-EN.pdf";
-import CVPt from "../../../assets/CV-Nilton-PT.pdf";
+import CVEn from "../../../assets/CV-NiltonF-EN.pdf";
+import CVPt from "../../../assets/CV-NiltonF-PT.pdf";
 
 export default function About() {
   return (
