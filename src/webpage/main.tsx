@@ -10,10 +10,17 @@ import ScrollUp from "./pages/ScrollUp";
 
 export default function MainWebpage() {
   return (
-    <div>
+    <div
+      style={{
+        overflowY: "scroll",
+        maxHeight: "100%",
+        scrollBehavior: "smooth",
+      }}
+      className="hide"
+    >
       <Header />
 
-      <div className="main">
+      <div>
         <Home />
         <About />
         <Skills />

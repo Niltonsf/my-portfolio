@@ -1,5 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
+import ReactDOMClient from "react-dom/client";
 import "./index.css";
 import "./font.css";
 import MainExperience from "./experience/main";
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-const root = ReactDOM.createRoot(
+const root = ReactDOMClient.createRoot(
   document.getElementById("root") as HTMLElement
 );
 

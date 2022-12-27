@@ -52,7 +52,7 @@
   color: #fff;
   width: 0;
   overflow: hidden;
-  transition: 2s;
+  transition: 1s;
 }
 
 .finalText:hover::before {
