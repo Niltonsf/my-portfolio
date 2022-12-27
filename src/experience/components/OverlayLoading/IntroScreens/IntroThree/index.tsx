@@ -19,14 +19,18 @@ export default function IntroThree({
       gsap.to(".htmlComponent", {
         opacity: 0,
         onComplete: () => {
-          gsap.to(planeMeshRef.current.material.uniforms.uAlpha, {
-            value: 0,
-            onComplete: () => {
-              setHideOverlay(true);
-              setHiddenLeva(false);
-              setOrbitControlsDisabled(true);
-            },
-          });
+          if (planeMeshRef) {
+            gsap.to(planeMeshRef.current.material.uniforms.uAlpha, {
+              value: 0,
+              onComplete: () => {
+                setHideOverlay(true);
+                setHiddenLeva(false);
+                setOrbitControlsDisabled(true);
+              },
+            });
+          } else {
+            console.log("error on ref");
+          }
         },
       });
     }, 1500);

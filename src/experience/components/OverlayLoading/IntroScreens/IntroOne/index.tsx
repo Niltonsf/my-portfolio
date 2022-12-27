@@ -18,7 +18,7 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
             setPresentationScreens(1);
           },
         });
-      }, 1000);
+      }, 1500);
     }
   }, [progress, setPresentationScreens]);
 

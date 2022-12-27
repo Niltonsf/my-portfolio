@@ -1,10 +1,11 @@
-import { Dispatch, SetStateAction, useRef, useState } from "react";
+import { Dispatch, SetStateAction, Suspense, useRef, useState } from "react";
 import OrbitControls from "./components/OrbitControls";
 import { Perf } from "r3f-perf";
 import { ObjectForReference } from "./components/ObjectForReference";
 import * as THREE from "three";
 import Room from "./components/Room";
 import useLevaControls from "./hook/useLevaControls";
+import OverlayLoading from "./components/OverlayLoading";
 
 interface ExperienceProps {
   setHiddenLeva: Dispatch<SetStateAction<boolean>>;
@@ -14,6 +15,8 @@ export default function Experience({ setHiddenLeva }: ExperienceProps) {
   const invisibleObjectRef = useRef<THREE.Mesh | null>(null);
   const [orbitControlsDisabled, setOrbitControlsDisabled] =
     useState<boolean>(false);
+  // Hide overaly
+  const [hideOverlay, setHideOverlay] = useState<boolean>(false);
   const [isPointerOnHtml, setIsPointerOnHtml] = useState<boolean>(false);
   const { viewWebpage, showPerformace } = useLevaControls();
 
@@ -35,12 +38,20 @@ export default function Experience({ setHiddenLeva }: ExperienceProps) {
         position={new THREE.Vector3(-4, 1.7, 0)}
       />
 
-      <Room
-        setIsPointerOnHtml={setIsPointerOnHtml}
-        isFocusOnHtml={viewWebpage}
-        setOrbitControlsDisabled={setOrbitControlsDisabled}
-        setHiddenLeva={setHiddenLeva}
-      />
+      {!hideOverlay && (
+        <OverlayLoading
+          setOrbitControlsDisabled={setOrbitControlsDisabled}
+          setHiddenLeva={setHiddenLeva}
+          setHideOverlay={setHideOverlay}
+        />
+      )}
+
+      <Suspense>
+        <Room
+          setIsPointerOnHtml={setIsPointerOnHtml}
+          isFocusOnHtml={viewWebpage}
+        />
+      </Suspense>
     </>
   );
 }
