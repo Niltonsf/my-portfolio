@@ -45,6 +45,7 @@ export default function Monitor({
                 src="https://niltonsf.dev/static"
                 title="myStaticWebsite"
                 style={{ width: isMobile ? 1200 : 1500 }}
+                onScrollCapture={() => console.log("captured")}
               />
             </div>
           </Html>

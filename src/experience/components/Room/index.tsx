@@ -20,7 +20,11 @@ export default function Room({ setIsPointerOnHtml, isFocusOnHtml }: RoomProps) {
   return (
     <>
       <StaticRoom geometry={nodes.room.geometry} bakedTexture={bakedTexture} />
-      <Chair geometry={nodes.chair.geometry} bakedTexture={bakedTexture} />
+      <Chair
+        geometry={nodes.chair.geometry}
+        bakedTexture={bakedTexture}
+        isViewingWebpage={isFocusOnHtml}
+      />
       <Monitor
         geometry={nodes.monitor.geometry}
         screen={nodes.screen}
