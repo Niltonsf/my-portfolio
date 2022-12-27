@@ -1,4 +1,3 @@
-import "./index.css";
 import { useState, useCallback, Dispatch, SetStateAction } from "react";
 import { Html } from "@react-three/drei";
 import IntroOne from "../IntroScreens/IntroOne";

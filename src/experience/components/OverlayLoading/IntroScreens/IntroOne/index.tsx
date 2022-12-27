@@ -10,9 +10,17 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
   const { progress } = useProgress();
 
   useEffect(() => {
+    setTimeout(() => {
+      gsap.to(".localHtml", {
+        opacity: 1,
+      });
+    }, 100);
+  }, []);
+
+  useEffect(() => {
     if (progress === 100) {
       setTimeout(() => {
-        gsap.to(".opacityControl", {
+        gsap.to(".localHtml", {
           opacity: 0,
           onComplete: () => {
             setPresentationScreens(1);
@@ -23,10 +31,18 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
   }, [progress, setPresentationScreens]);
 
   return (
-    <div className="localHtml opacityControl">
+    <div className="localHtml" style={{ opacity: 0 }}>
       <div className="commonHtml">
         <div style={{ marginBottom: 20 }}>
-          <span className="introText">We are loading your experience</span>
+          <span
+            className="introText finalText"
+            style={{
+              fontSize: 40,
+              cursor: "default",
+            }}
+          >
+            We are loading your experience
+          </span>
         </div>
 
         <div className="progressBar">

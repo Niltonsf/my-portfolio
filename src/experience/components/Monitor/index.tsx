@@ -1,5 +1,6 @@
 import { Html } from "@react-three/drei";
 import { Dispatch, SetStateAction } from "react";
+import { isMobile } from "react-device-detect";
 import * as THREE from "three";
 
 interface MonitorProps {
@@ -43,6 +44,7 @@ export default function Monitor({
               <iframe
                 src="https://niltonsf.dev/static"
                 title="myStaticWebsite"
+                style={{ width: isMobile ? 1200 : 1500 }}
               />
             </div>
           </Html>
