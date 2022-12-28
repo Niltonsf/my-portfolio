@@ -27,11 +27,13 @@
 .skills_group {
   display: grid;
   align-items: flex-start;
-  row-gap: 1rem;
+  row-gap: 1.5rem;
 }
 
 .skills_data {
   display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   column-gap: 0.5rem;
 }
 
@@ -43,6 +45,8 @@
 .skills_name {
   font-size: var(--normal-font-size);
   font-family: "SFMedium";
+  margin-top: -1px;
+  margin-bottom: -1px;
   line-height: 18px;
 }
 

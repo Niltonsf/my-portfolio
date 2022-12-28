@@ -1,6 +1,6 @@
+import "./index.css";
 import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import "./index.css";
 import process from "process";
 import { AiOutlineCheck, AiOutlineClose } from "react-icons/ai";
 import CircularProgress from "react-loading-indicators";
@@ -146,7 +146,7 @@ export default function Contact() {
                 placeholder="Your message 😀"
               ></textarea>
             </div>
-            <button className="button button--flex">
+            <button className="button button--flex" style={{ marginTop: 50 }}>
               {loading ? (
                 <div
                   style={{
