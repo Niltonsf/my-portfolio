@@ -9,10 +9,10 @@ export default function Qualification() {
 
       <div className="qualification_container container">
         <div className="qualification_tabs">
-          <div className="qualification_button qualification_active button--flex">
+          {/* <div className="qualification_button qualification_active button--flex">
             <i className="uil uil-graduation-cap qualification_icon"></i>{" "}
             Education
-          </div>
+          </div> */}
 
           <div className="qualification_button button--flex">
             <i className="uil uil-briefcase-alt qualification_icon"></i>{" "}
