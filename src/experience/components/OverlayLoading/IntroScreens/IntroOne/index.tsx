@@ -35,7 +35,7 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
       <div className="commonHtml">
         <div style={{ marginBottom: 20 }}>
           <span
-            className="introText finalText "
+            className="introText finalText"
             style={{
               display: "table",
               fontSize: 40,
