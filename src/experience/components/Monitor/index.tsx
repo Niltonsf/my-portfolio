@@ -37,12 +37,14 @@ export default function Monitor({
               onPointerEnter={(e) => {
                 if (isFocusOnHtml) setIsPointerOnHtml(true);
               }}
-              onPointerLeave={() => {
+              onPointerLeave={(e) => {
                 if (isFocusOnHtml) setIsPointerOnHtml(false);
               }}
             >
               <iframe
-                src="https://niltonsf.dev/static"
+                id="iframe"
+                // src="https://niltonsf.dev/static"
+                src="http://192.168.1.13:3000/static"
                 title="myStaticWebsite"
                 style={{ width: isMobile ? 1200 : 1500 }}
               />

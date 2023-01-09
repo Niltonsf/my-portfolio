@@ -2,6 +2,7 @@ import sleep from "../../../utils/sleep";
 import gsap from "gsap";
 import { Dispatch, RefObject, SetStateAction } from "react";
 import { OrbitControlsProps } from "@react-three/drei";
+import { isMobile } from "react-device-detect";
 
 export interface OrbitControlsExtendedProps extends OrbitControlsProps {
   target: any;
@@ -47,17 +48,28 @@ export const handlingGsapAnimationsOnHtmlFocus = ({
     // This sleep is for the user not scroll while the animation happens
     sleep(1200).then(() => {
       setAnimationOnHtmlFinished(true);
-      orbitControlsRef!.current!.minDistance = 2.1;
-      orbitControlsRef!.current!.maxDistance = 2.7;
+      if (isMobile) {
+        orbitControlsRef!.current!.minDistance = 3.1;
+        orbitControlsRef!.current!.maxDistance = 5.7;
+      } else {
+        orbitControlsRef!.current!.minDistance = 2.1;
+        orbitControlsRef!.current!.maxDistance = 2.7;
+      }
     });
   } else {
     orbitControlsRef!.current!.enableZoom = false;
-    orbitControlsRef!.current!.minDistance = 0;
-    orbitControlsRef!.current!.maxDistance = 12;
+    if (isMobile) {
+      orbitControlsRef!.current!.minDistance = 0;
+      orbitControlsRef!.current!.maxDistance = 14;
+    } else {
+      orbitControlsRef!.current!.minDistance = 0;
+      orbitControlsRef!.current!.maxDistance = 12;
+    }
+
     gsap.to(orbitControlsRef!.current!.object!.position, {
-      x: 3.9,
-      y: 3.5,
-      z: 6,
+      x: isMobile ? 11 : 4.9,
+      y: isMobile ? 6 : 3.5,
+      z: isMobile ? 12 : 6,
       duration: 1.3,
     });
     gsap.to(orbitControlsRef!.current!.target, {

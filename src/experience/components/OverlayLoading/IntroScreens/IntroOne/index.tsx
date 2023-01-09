@@ -37,8 +37,10 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
           <span
             className="introText finalText"
             style={{
+              display: "table",
               fontSize: 40,
               cursor: "default",
+              textAlign: "center",
             }}
           >
             We are loading your experience

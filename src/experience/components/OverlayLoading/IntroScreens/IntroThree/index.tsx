@@ -20,7 +20,7 @@ export default function IntroThree({
         opacity: 0,
         onComplete: () => {
           if (planeMeshRef) {
-            gsap.to(planeMeshRef.current.material.uniforms.uAlpha, {
+            gsap.to(planeMeshRef?.current?.material?.uniforms?.uAlpha, {
               value: 0,
               onComplete: () => {
                 setHideOverlay(true);
