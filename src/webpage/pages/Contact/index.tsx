@@ -1,11 +1,20 @@
 import "./index.css";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import process from "process";
 import { AiOutlineCheck, AiOutlineClose } from "react-icons/ai";
 import CircularProgress from "react-loading-indicators";
+import { useMediaQuery } from "usehooks-ts";
+import { ContactContainer, ContactForm, ContactInfo } from "./styles";
 
 export default function Contact() {
+  const largeDevices = useMediaQuery("(max-width: 992px)");
+  const mediumDevices = useMediaQuery("(max-width: 768px)");
+  const smallMediumDevices = useMediaQuery("(max-width: 576px)");
+
+  const form = useRef<any>();
+  const [loading, setLoading] = useState(false);
+
   const defaultButtonProps = (
     <>
       Send Message
@@ -28,8 +37,6 @@ export default function Contact() {
       </svg>
     </>
   );
-  const form = useRef<any>();
-  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(defaultButtonProps);
 
   const sendEmail = (e: any) => {
@@ -63,17 +70,20 @@ export default function Contact() {
     e.target.reset();
   };
 
-  useEffect(() => {}, []);
   return (
     <section className="contact section" id="contact">
       <div className="section__title">Get in touch</div>
       <span className="section__subtitle">Contact Me</span>
 
-      <div className="contact_container container grid">
+      <ContactContainer
+        largeDevices={largeDevices}
+        mediumDevices={mediumDevices}
+      >
         <div className="contact_content">
-          <h3 className="contact_title">Talk to me</h3>
-
-          <div className="contact_info">
+          <ContactInfo
+            mediumDevices={mediumDevices}
+            smallMediumDevices={smallMediumDevices}
+          >
             <div className="contact_card">
               <i className="bx bx-mail-send contact_card-icon"></i>
 
@@ -93,6 +103,7 @@ export default function Contact() {
               </a>
             </div>
 
+            <div style={{ height: 50 }} />
             <div className="contact_card">
               <i className="bx bxl-whatsapp contact_card-icon"></i>
 
@@ -109,13 +120,18 @@ export default function Contact() {
                 <i className="bx bx-right-arrow-alt contact_button-icon"></i>
               </a>
             </div>
-          </div>
+          </ContactInfo>
         </div>
 
-        <div className="contact_content">
+        {/* <div className="contact_content">
           <h3 className="contact_title">Write me your message</h3>
 
-          <form className="contact_form" ref={form} onSubmit={sendEmail}>
+          <ContactForm
+            ref={form}
+            onSubmit={sendEmail}
+            mediumDevices={mediumDevices}
+            smallMediumDevices={smallMediumDevices}
+          >
             <div className="contact_form-div">
               <label className="contact_form-tag">Name</label>
               <input
@@ -136,7 +152,7 @@ export default function Contact() {
               />
             </div>
 
-            <div className="contact_form-div contact_form-area ">
+            <div className="contact_form-div contact_form-area">
               <label className="contact_form-tag">Project</label>
               <textarea
                 name="project"
@@ -146,6 +162,7 @@ export default function Contact() {
                 placeholder="Your message 😀"
               ></textarea>
             </div>
+
             <button className="button button--flex" style={{ marginTop: 50 }}>
               {loading ? (
                 <div
@@ -166,9 +183,9 @@ export default function Contact() {
                 <>{result}</>
               )}
             </button>
-          </form>
-        </div>
-      </div>
+          </ContactForm>
+        </div> */}
+      </ContactContainer>
     </section>
   );
 }

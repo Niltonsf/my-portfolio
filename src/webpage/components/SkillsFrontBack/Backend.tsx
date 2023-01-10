@@ -1,17 +1,26 @@
 import React from "react";
+import { useMediaQuery } from "usehooks-ts";
+import {
+  SkillsBox,
+  SkillsContent,
+  SkillsName,
+} from "../../pages/Skills/styles";
 
 export default function BackendSkills() {
+  const smallMediumDevices = useMediaQuery("(max-width: 576px)");
+  const smallDevices = useMediaQuery("(max-width: 350px)");
+
   return (
-    <div className="skills_content">
+    <SkillsContent smallMediumDevices={smallMediumDevices}>
       <h3 className="skills_title">Backend Developer</h3>
 
-      <div className="skills_box">
+      <SkillsBox smallDevices={smallDevices}>
         <div className="skills_group">
           <div className="skills_data">
             <i className="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">NodeJS</h3>
+              <SkillsName smallDevices={smallDevices}>NodeJS</SkillsName>
               <span className="skills_level">Advanced</span>
             </div>
           </div>
@@ -20,7 +29,7 @@ export default function BackendSkills() {
             <i className="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">Firebase</h3>
+              <SkillsName smallDevices={smallDevices}>Firebase</SkillsName>
               <span className="skills_level">Intermediate</span>
             </div>
           </div>
@@ -29,7 +38,7 @@ export default function BackendSkills() {
             <i className="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">SQL</h3>
+              <SkillsName smallDevices={smallDevices}>SQL</SkillsName>
               <span className="skills_level">Intermediate</span>
             </div>
           </div>
@@ -40,7 +49,7 @@ export default function BackendSkills() {
             <i className="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">Python</h3>
+              <SkillsName smallDevices={smallDevices}>Python</SkillsName>
               <span className="skills_level">Basic</span>
             </div>
           </div>
@@ -49,7 +58,7 @@ export default function BackendSkills() {
             <i className="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">NestJS</h3>
+              <SkillsName smallDevices={smallDevices}>NestJS</SkillsName>
               <span className="skills_level">Advanced</span>
             </div>
           </div>
@@ -58,12 +67,12 @@ export default function BackendSkills() {
             <i className="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">NoSQL</h3>
+              <SkillsName smallDevices={smallDevices}>NoSQL</SkillsName>
               <span className="skills_level">Intermediate</span>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </SkillsBox>
+    </SkillsContent>
   );
 }

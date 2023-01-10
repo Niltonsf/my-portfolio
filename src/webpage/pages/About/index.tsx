@@ -1,28 +1,42 @@
+import React from "react";
 import "./index.css";
 import AboutImg from "../../../assets/profile.jpg";
 import Info from "../../components/Info";
 import CVEn from "../../../assets/CV-NiltonF-EN.pdf";
 import CVPt from "../../../assets/CV-NiltonF-PT.pdf";
+import { useMediaQuery } from "usehooks-ts";
+import {
+  AboutContainer,
+  AboutImage,
+  AboutData,
+  AboutDescription,
+} from "./styles";
 
 export default function About() {
+  const largeDevices = useMediaQuery("(max-width: 992px)");
+  const smallMediumDevices = useMediaQuery("(max-width: 576px)");
+
   return (
     <section className="about section" id="about">
       <h2 className="section__title">About Me</h2>
       <span className="section__subtitle">My introduction</span>
 
-      <div className="about_container container grid">
-        <img src={AboutImg} alt="" className="about_img"></img>
+      <AboutContainer largeDevices={largeDevices}>
+        <AboutImage src={AboutImg} largeDevices={largeDevices} />
 
-        <div className="about_data">
+        <AboutData largeDevices={largeDevices}>
           <Info />
 
-          <p className="about_description">
+          <AboutDescription
+            largeDevices={largeDevices}
+            smallMediumDevices={smallMediumDevices}
+          >
             Developing and colaborating on a wide variety of projects for
             companies. I have experience working with software-related projects
             across several lines of business such as healthcare, entertainment,
             IoT, ground transportation, and education. Always focusing on clean,
             professional, responsive applications.
-          </p>
+          </AboutDescription>
 
           <div className="about_cv">
             <a download="" href={CVEn} className="button button--flex">
@@ -53,7 +67,7 @@ export default function About() {
                 ></path>
               </svg>
             </a>
-
+            <div style={{ width: 10 }} />
             <a download="" href={CVPt} className="button button--flex">
               Download CV PT
               <svg
@@ -83,8 +97,8 @@ export default function About() {
               </svg>
             </a>
           </div>
-        </div>
-      </div>
+        </AboutData>
+      </AboutContainer>
     </section>
   );
 }

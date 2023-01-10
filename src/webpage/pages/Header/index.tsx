@@ -111,7 +111,7 @@ export default function Header() {
           style={
             mediumDevices
               ? { display: "block", fontSize: `1.2rem`, cursor: `pointer` }
-              : {}
+              : { display: "none" }
           }
           onClick={() => setToggleMenu(!toggleMenu)}
         >
