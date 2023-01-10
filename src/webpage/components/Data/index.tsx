@@ -1,8 +1,17 @@
 import React from "react";
+import {
+  HomeSubtitle,
+  HomeDescription,
+  HomeData,
+} from "../../pages/Home/styles";
+import { useMediaQuery } from "usehooks-ts";
 
 export default function Data() {
+  const largeDevices = useMediaQuery("(max-width: 992px)");
+  const mediumDevices = useMediaQuery("(max-width: 768px)");
+
   return (
-    <div className="home_data">
+    <HomeData mediumDevices={mediumDevices}>
       <h1 className="home_title">
         Nilton Schumacher Filho
         <svg
@@ -55,16 +64,18 @@ export default function Data() {
           ></path>
         </svg>
       </h1>
-      <h3 className="home_subtitle">Full Stack Developer</h3>
-      <p className="home_description">
+      <HomeSubtitle largeDevices={largeDevices}>
+        Full Stack Developer
+      </HomeSubtitle>
+      <HomeDescription largeDevices={largeDevices}>
         I'm a Full Stack Developer based in Curitiba. I'm very passionate,
         dedicated, helpful, grateful for all working enviroments and
         opportunities.
-      </p>
+      </HomeDescription>
       <a href="#contact" className="button button--flex">
         Say Hello
         <svg
-          className="button_icon"
+          className="button__icon"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -81,6 +92,6 @@ export default function Data() {
           ></path>
         </svg>
       </a>
-    </div>
+    </HomeData>
   );
 }

@@ -1,8 +1,13 @@
 import React from "react";
+import { useMediaQuery } from "usehooks-ts";
+import { HomeScroll } from "../../pages/Home/styles";
 
 export default function ScrollDown() {
+  const largeDevices = useMediaQuery("(max-width: 992px)");
+  const mediumDevices = useMediaQuery("(max-width: 768px)");
+
   return (
-    <div className="home_scroll">
+    <HomeScroll largeDevices={largeDevices} mediumDevices={mediumDevices}>
       <a href="#about" className="home_scroll-button">
         <svg
           width="32px"
@@ -42,6 +47,6 @@ export default function ScrollDown() {
         <span className="home_scroll-name">Scroll Down</span>
         <i className="uil uil-arrow-down home_scroll-arrow"></i>
       </a>
-    </div>
+    </HomeScroll>
   );
 }
