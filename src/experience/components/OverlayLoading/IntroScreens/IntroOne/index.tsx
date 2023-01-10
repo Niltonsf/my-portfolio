@@ -13,6 +13,7 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
     setTimeout(() => {
       gsap.to(".localHtml", {
         opacity: 1,
+        lazy: false,
       });
     }, 100);
   }, []);
@@ -22,8 +23,11 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
       setTimeout(() => {
         gsap.to(".localHtml", {
           opacity: 0,
+          lazy: false,
           onComplete: () => {
-            setPresentationScreens(1);
+            setTimeout(() => {
+              setPresentationScreens(1);
+            }, 500);
           },
         });
       }, 1500);
@@ -31,7 +35,7 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
   }, [progress, setPresentationScreens]);
 
   return (
-    <div className="localHtml" style={{ opacity: 0 }}>
+    <div className="localHtml">
       <div className="commonHtml">
         <div style={{ marginBottom: 20 }}>
           <span

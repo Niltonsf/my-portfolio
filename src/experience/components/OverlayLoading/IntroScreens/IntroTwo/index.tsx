@@ -10,20 +10,17 @@ export default function IntroTwo({ setPresentationScreens }: IntroTwoProps) {
     setTimeout(() => {
       gsap.to(".localHtml", {
         opacity: 1,
+        lazy: false,
         onComplete: () => {
-          gsap.to(".introText", {
-            opacity: 1,
-            onComplete: () => {
-              setTimeout(() => {
-                gsap.to(".introText", {
-                  opacity: 0,
-                  onComplete: () => {
-                    setPresentationScreens(2);
-                  },
-                });
-              }, 1500);
-            },
-          });
+          setTimeout(() => {
+            gsap.to(".introText", {
+              opacity: 0,
+              lazy: false,
+              onComplete: () => {
+                setPresentationScreens(2);
+              },
+            });
+          }, 1500);
         },
       });
     }, 500);
