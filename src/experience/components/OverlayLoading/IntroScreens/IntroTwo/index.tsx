@@ -8,17 +8,22 @@ interface IntroTwoProps {
 export default function IntroTwo({ setPresentationScreens }: IntroTwoProps) {
   useEffect(() => {
     setTimeout(() => {
-      gsap.to(".introText", {
+      gsap.to(".localHtml", {
         opacity: 1,
         onComplete: () => {
-          setTimeout(() => {
-            gsap.to(".introText", {
-              opacity: 0,
-              onComplete: () => {
-                setPresentationScreens(2);
-              },
-            });
-          }, 1500);
+          gsap.to(".introText", {
+            opacity: 1,
+            onComplete: () => {
+              setTimeout(() => {
+                gsap.to(".introText", {
+                  opacity: 0,
+                  onComplete: () => {
+                    setPresentationScreens(2);
+                  },
+                });
+              }, 1500);
+            },
+          });
         },
       });
     }, 500);
