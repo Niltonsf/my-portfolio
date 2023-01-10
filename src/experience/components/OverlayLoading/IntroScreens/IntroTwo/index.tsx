@@ -10,10 +10,12 @@ export default function IntroTwo({ setPresentationScreens }: IntroTwoProps) {
     setTimeout(() => {
       gsap.to(".introText", {
         opacity: 1,
+        lazy: false,
         onComplete: () => {
           setTimeout(() => {
             gsap.to(".introText", {
               opacity: 0,
+              lazy: false,
               onComplete: () => {
                 setPresentationScreens(2);
               },

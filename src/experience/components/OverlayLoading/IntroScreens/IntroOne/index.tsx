@@ -13,6 +13,7 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
     setTimeout(() => {
       gsap.to(".localHtml", {
         opacity: 1,
+        lazy: false,
       });
     }, 100);
   }, []);
@@ -22,13 +23,14 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
       setTimeout(() => {
         gsap.to(".localHtml", {
           opacity: 0,
+          lazy: false,
           onComplete: () => {
             setTimeout(() => {
               setPresentationScreens(1);
             }, 1000);
           },
         });
-      }, 1500);
+      }, 2000);
     }
   }, [progress, setPresentationScreens]);
 
