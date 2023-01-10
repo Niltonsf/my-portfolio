@@ -23,7 +23,9 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
         gsap.to(".localHtml", {
           opacity: 0,
           onComplete: () => {
-            setPresentationScreens(1);
+            setTimeout(() => {
+              setPresentationScreens(1);
+            }, 1000);
           },
         });
       }, 1500);
@@ -31,7 +33,7 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
   }, [progress, setPresentationScreens]);
 
   return (
-    <div className="localHtml" style={{ opacity: 0 }}>
+    <div className="localHtml">
       <div className="commonHtml">
         <div style={{ marginBottom: 20 }}>
           <span
