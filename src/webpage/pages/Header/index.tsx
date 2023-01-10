@@ -1,23 +1,33 @@
 import "./index.css";
 import { HeaderCP, Nav, NavMenu, Ul, CloseIcon } from "./styles";
 import { useMediaQuery } from "usehooks-ts";
+import { useState } from "react";
 
 export default function Header() {
-  const matches = useMediaQuery("(max-width: 768px)");
+  const [toggleMenu, setToggleMenu] = useState(false);
+
+  const mediumDevices = useMediaQuery("(max-width: 768px)");
+  const smallDevices = useMediaQuery("(max-width: 350px)");
 
   return (
-    <HeaderCP>
+    <HeaderCP mediumDevices={mediumDevices}>
       <Nav>
         <span className="nav_logo">Nilton A Schumacher F</span>
 
-        <NavMenu matches={matches}>
-          <Ul matches={matches}>
+        <NavMenu
+          smallDevices={smallDevices}
+          mediumDevices={mediumDevices}
+          toggleMenu={toggleMenu}
+        >
+          <Ul smallDevices={smallDevices} mediumDevices={mediumDevices}>
             <li className="nav_item">
               <a href="#home" className="nav_link active-link">
                 <i
                   className="uil uil-estate nav_icon"
                   style={
-                    matches ? { display: "block", fontSize: `1.2rem` } : {}
+                    mediumDevices
+                      ? { display: "block", fontSize: `1.2rem` }
+                      : {}
                   }
                 ></i>
                 Home
@@ -28,7 +38,9 @@ export default function Header() {
                 <i
                   className="uil uil-user nav_icon"
                   style={
-                    matches ? { display: "block", fontSize: `1.2rem` } : {}
+                    mediumDevices
+                      ? { display: "block", fontSize: `1.2rem` }
+                      : {}
                   }
                 ></i>
                 About
@@ -39,7 +51,9 @@ export default function Header() {
                 <i
                   className="uil uil-file-alt nav_icon"
                   style={
-                    matches ? { display: "block", fontSize: `1.2rem` } : {}
+                    mediumDevices
+                      ? { display: "block", fontSize: `1.2rem` }
+                      : {}
                   }
                 ></i>
                 Skills
@@ -50,7 +64,9 @@ export default function Header() {
                 <i
                   className="uil uil-briefcase-alt nav_icon"
                   style={
-                    matches ? { display: "block", fontSize: `1.2rem` } : {}
+                    mediumDevices
+                      ? { display: "block", fontSize: `1.2rem` }
+                      : {}
                   }
                 ></i>
                 Qualification
@@ -61,7 +77,9 @@ export default function Header() {
                 <i
                   className="uil uil-scenery nav_icon"
                   style={
-                    matches ? { display: "block", fontSize: `1.2rem` } : {}
+                    mediumDevices
+                      ? { display: "block", fontSize: `1.2rem` }
+                      : {}
                   }
                 ></i>
                 Portfolio
@@ -72,7 +90,9 @@ export default function Header() {
                 <i
                   className="uil uil-message nav_icon"
                   style={
-                    matches ? { display: "block", fontSize: `1.2rem` } : {}
+                    mediumDevices
+                      ? { display: "block", fontSize: `1.2rem` }
+                      : {}
                   }
                 ></i>
                 Contact
@@ -80,8 +100,23 @@ export default function Header() {
             </li>
           </Ul>
 
-          <CloseIcon matches={matches} />
+          <CloseIcon
+            mediumDevices={mediumDevices}
+            onClick={() => setToggleMenu(false)}
+          />
         </NavMenu>
+
+        <div
+          className="nav_toggle"
+          style={
+            mediumDevices
+              ? { display: "block", fontSize: `1.2rem`, cursor: `pointer` }
+              : {}
+          }
+          onClick={() => setToggleMenu(!toggleMenu)}
+        >
+          <i className="uil uil-apps"></i>
+        </div>
       </Nav>
     </HeaderCP>
   );

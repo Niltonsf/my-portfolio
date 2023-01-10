@@ -1,59 +1,90 @@
 import styled from "styled-components";
 
 interface MediaQuery {
-  matches: boolean;
+  mediumDevices?: boolean;
+  smallDevices?: boolean;
+  toggleMenu?: boolean;
 }
 
-export const HeaderCP = styled.div`
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: var(--z-fixed);
-  background-color: var(--body-color);
+export const HeaderCP = styled.div<MediaQuery>`
+  ${(props) => {
+    let finalStyles = ``;
+    finalStyles += `
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: var(--z-fixed);
+        background-color: var(--body-color);
+    `;
+    if (props.mediumDevices) {
+      finalStyles += `        
+        top: initial;
+        bottom: 0;
+      `;
+    }
+    return finalStyles;
+  }}
 `;
 
-export const Nav = styled.nav`
+export const Nav = styled.nav.attrs({
+  className: "container",
+})`
   height: calc(var(--header-height) + 1.5rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
   column-gap: 1rem;
-  max-width: 968px;
-  margin-left: auto;
-  margin-right: auto;
 `;
 
 export const NavMenu = styled.div<MediaQuery>`
   ${(props) => {
-    if (props.matches) {
-      return `
+    let finalStyles = ``;
+    if (props.mediumDevices) {
+      finalStyles += `
         position: fixed;
-        bottom: 0;
+        bottom: ${props.toggleMenu ? 0 : `-100%`};
         left: 0;
-        width: 70vw;
-        background-color: var(--body-color);
-        padding-top: 2rem;
-        padding: 2rem 1.5rem 4rem;
+        right: 0;        
+        width: 100vw - 50px;
+        background-color: var(--body-color);        
+        padding: 2rem 1.5rem 4rem;        
         box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
         border-radius: 1.5rem 1.5rem 0 0;
         transition: 0.3s;        
       `;
     }
-    return ``;
+    if (props.smallDevices) {
+      finalStyles += `
+        padding: 2rem 0.25rem 4rem;        
+      `;
+    }
+    return finalStyles;
   }}
 `;
 
 export const Ul = styled.ul<MediaQuery>`
   ${(props) => {
-    if (props.matches) {
-      return `
+    let finalStyles = ``;
+    finalStyles += `
+      display: flex;     
+      column-gap: 2rem;      
+      padding: 0;
+    `;
+    if (props.mediumDevices) {
+      finalStyles += `
        display: grid;
        grid-template-columns: repeat(3, 1fr);   
        gap: 2rem;
+       column-gap: 2rem
     `;
     }
-    return ``;
+    if (props.smallDevices) {
+      finalStyles += `
+        column-gap: 0;
+      `;
+    }
+    return finalStyles;
   }}
 `;
 
@@ -61,7 +92,8 @@ export const CloseIcon = styled.i.attrs({
   className: "uil uil-times nav_close",
 })<MediaQuery>`
   ${(props) => {
-    if (props.matches) {
+    if (props.smallDevices) {
+    } else if (props.mediumDevices) {
       return `
         display: block;
         position: absolute;

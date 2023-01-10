@@ -4,11 +4,6 @@
   font-family: "SFMedium";
 }
 
-.nav_list {
-  display: flex;
-  column-gap: 2rem;
-}
-
 .nav_link {
   display: flex;
   flex-direction: column;
@@ -17,12 +12,6 @@
   color: var(--title-color);
   font-family: "SFMedium";
   transition: 0.3s;
-}
-
-.nav_close,
-.nav_icon,
-.nav_toggle {
-  display: none;
 }
 
 /* Active link */
