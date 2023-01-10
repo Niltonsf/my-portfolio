@@ -8,14 +8,23 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import ScrollUp from "./pages/ScrollUp";
 import { useMediaQuery } from "usehooks-ts";
+import { useCallback, useEffect } from "react";
+import { handleContainerStyle } from "../mediaQuery/mediaQueryHandles";
 
 export default function MainWebpage() {
-  const matches = useMediaQuery("(max-width: 776px)");
+  const matches = useMediaQuery("(max-width: 992px)");
+
+  const handleMediaQuery = useCallback(() => {
+    handleContainerStyle(matches);
+  }, [matches]);
+
+  useEffect(() => {
+    handleMediaQuery();
+  }, [handleMediaQuery]);
 
   return (
     <div
       style={{
-        background: matches ? "red" : "white",
         overflowY: "scroll",
         maxHeight: "100%",
         scrollBehavior: "smooth",
