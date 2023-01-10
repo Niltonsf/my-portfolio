@@ -12,11 +12,12 @@ import { useCallback, useEffect } from "react";
 import { handleContainerStyle } from "../mediaQuery/mediaQueryHandles";
 
 export default function MainWebpage() {
-  const matches = useMediaQuery("(max-width: 992px)");
+  const largeDevices = useMediaQuery("(max-width: 992px)");
+  const mediumDevices = useMediaQuery("(max-width: 768px)");
 
   const handleMediaQuery = useCallback(() => {
-    handleContainerStyle(matches);
-  }, [matches]);
+    handleContainerStyle(largeDevices, mediumDevices);
+  }, [largeDevices, mediumDevices]);
 
   useEffect(() => {
     handleMediaQuery();

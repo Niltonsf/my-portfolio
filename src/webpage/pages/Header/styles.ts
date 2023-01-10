@@ -13,7 +13,7 @@ export const HeaderCP = styled.div<MediaQuery>`
         width: 100%;
         position: fixed;
         top: 0;
-        left: 0;
+        left: 0;        
         z-index: var(--z-fixed);
         background-color: var(--body-color);
     `;
