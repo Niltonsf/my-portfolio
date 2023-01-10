@@ -9,7 +9,6 @@ import { HomeContent, HomeImg, HomeContainer } from "./styles";
 export default function Home() {
   const largeDevices = useMediaQuery("(max-width: 992px)");
   const mediumDevices = useMediaQuery("(max-width: 768px)");
-  const smallMediumDevices = useMediaQuery("(max-width: 576px)");
   const smallDevices = useMediaQuery("(max-width: 350px)");
 
   return (
