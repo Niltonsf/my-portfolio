@@ -27,10 +27,10 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
           onComplete: () => {
             setTimeout(() => {
               setPresentationScreens(1);
-            }, 1000);
+            }, 500);
           },
         });
-      }, 2000);
+      }, 1500);
     }
   }, [progress, setPresentationScreens]);
 
