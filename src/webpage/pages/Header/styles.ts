@@ -103,6 +103,8 @@ export const CloseIcon = styled.i.attrs({
         cursor: pointer;
       `;
     }
-    return ``;
+    return `
+      display: none;
+    `;
   }}
 `;

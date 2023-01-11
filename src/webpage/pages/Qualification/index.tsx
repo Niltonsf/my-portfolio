@@ -1,26 +1,30 @@
+import { useMediaQuery } from "usehooks-ts";
 import QualificationData from "../../components/QualificationData";
 import "./index.css";
+import { QualificationContainer, QualificationSections } from "./styles";
 
 export default function Qualification() {
+  const largeDevices = useMediaQuery("(max-width: 992px)");
+  const mediumDevices = useMediaQuery("(max-width: 768px)");
+  const smallMediumDevices = useMediaQuery("(max-width: 576px)");
+
   return (
     <section className="qualification section" id="qualification">
       <h2 className="section__title">Qualifications</h2>
       <span className="section__subtitle">My personal journey</span>
 
-      <div className="qualification_container container">
+      <QualificationContainer
+        largeDevices={largeDevices}
+        mediumDevices={mediumDevices}
+      >
         <div className="qualification_tabs">
-          {/* <div className="qualification_button qualification_active button--flex">
-            <i className="uil uil-graduation-cap qualification_icon"></i>{" "}
-            Education
-          </div> */}
-
           <div className="qualification_button button--flex">
             <i className="uil uil-briefcase-alt qualification_icon"></i>{" "}
             Experience
           </div>
         </div>
 
-        <div className="qualification_sections">
+        <QualificationSections smallMediumDevices={smallMediumDevices}>
           <div className="qualification_content qualification_content-active">
             <QualificationData
               left={true}
@@ -51,8 +55,8 @@ export default function Qualification() {
               calendar={"april 2021 - october 2021"}
             />
           </div>
-        </div>
-      </div>
+        </QualificationSections>
+      </QualificationContainer>
     </section>
   );
 }

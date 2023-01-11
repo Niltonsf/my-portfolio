@@ -1,3 +1,6 @@
+import { useMediaQuery } from "usehooks-ts";
+import { QualificationDataContainer } from "../../pages/Qualification/styles";
+
 export default function QualificationData({
   left,
   title,
@@ -7,10 +10,12 @@ export default function QualificationData({
   location,
   state,
 }: any) {
+  const smallDevices = useMediaQuery("(max-width: 350px)");
+
   return (
     <>
       {left ? (
-        <div className="qualification_data">
+        <QualificationDataContainer smallDevices={smallDevices}>
           <div
             style={{
               display: "flex",
@@ -46,9 +51,9 @@ export default function QualificationData({
             <span className="qualification_rounder"></span>
             <span className="qualification_line"></span>
           </div>
-        </div>
+        </QualificationDataContainer>
       ) : (
-        <div className="qualification_data">
+        <QualificationDataContainer smallDevices={smallDevices}>
           <div></div>
 
           <div>
@@ -77,7 +82,7 @@ export default function QualificationData({
               <i className="uil uil-calendar-alt"></i> {calendar}
             </div>
           </div>
-        </div>
+        </QualificationDataContainer>
       )}
     </>
   );

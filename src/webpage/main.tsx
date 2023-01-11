@@ -27,6 +27,7 @@ export default function MainWebpage() {
     <div
       style={{
         overflowY: "scroll",
+        overflowX: "hidden",
         maxHeight: "100%",
         scrollBehavior: "smooth",
       }}

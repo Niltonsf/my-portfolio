@@ -1,6 +1,9 @@
 export const handleContainerStyle = (largeDevices: any, mediumDevices: any) => {
   const container = Array.from(document.getElementsByClassName("container"));
   const section = Array.from(document.getElementsByClassName("section"));
+  const sectionSubtitle = Array.from(
+    document.getElementsByClassName("section__subtitle")
+  );
   const button = Array.from(document.getElementsByClassName("button"));
   const buttonIcon = Array.from(
     document.getElementsByClassName("button__icon")
@@ -15,36 +18,38 @@ export const handleContainerStyle = (largeDevices: any, mediumDevices: any) => {
       : "margin-left: auto;";
   });
 
-  if (largeDevices) {
-    button.forEach((but: any) => {
-      but.style.cssText += largeDevices
-        ? `padding: 1rem 1.7rem;`
-        : `padding: 1.25rem 2rem;`;
-    });
+  button.forEach((but: any) => {
+    but.style.cssText += largeDevices
+      ? `padding: 1rem 1.7rem;`
+      : `padding: 1.25rem 2rem;`;
+  });
 
-    buttonIcon.forEach((butIcon: any) => {
-      butIcon.style.cssText += largeDevices
-        ? `
-      width: 20px;
-      height: 20px;
-      margin-left: var(--mb-0-5);
+  buttonIcon.forEach((butIcon: any) => {
+    butIcon.style.cssText += largeDevices
+      ? `
+    width: 20px;
+    height: 20px;
+    margin-left: var(--mb-0-5);
+  `
+      : `
+    width: 24px;
+    height: 24px;
+    margin-left: var(--mb-0-5);`;
+  });
+
+  sectionSubtitle.forEach((section: any) => {
+    section.style.cssText += mediumDevices
+      ? `margin-bottom: var(--mb-3)`
+      : `margin-bottom: 4rem;`;
+  });
+
+  section.forEach((section: any) => {
+    section.style.cssText += mediumDevices
+      ? `
+      padding: 2rem 0 4rem;
     `
-        : `
-      width: 24px;
-      height: 24px;
-      margin-left: var(--mb-0-5);`;
-    });
-  }
-
-  if (mediumDevices) {
-    section.forEach((section: any) => {
-      section.style.cssText += largeDevices
-        ? `
-        padding: 2rem 0 4rem;
-      `
-        : `
-        padding: 6rem 0 2rem;
-        `;
-    });
-  }
+      : `
+      padding: 6rem 0 2rem;
+      `;
+  });
 };

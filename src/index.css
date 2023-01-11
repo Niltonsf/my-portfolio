@@ -159,8 +159,9 @@ img {
 }
 
 .button--flex {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .hide::-webkit-scrollbar {
