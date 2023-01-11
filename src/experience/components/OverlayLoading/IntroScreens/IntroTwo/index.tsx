@@ -9,6 +9,7 @@ export default function IntroTwo({ setPresentationScreens }: IntroTwoProps) {
   useEffect(() => {
     setTimeout(() => {
       gsap.to(".localHtml", {
+        opacity: 1,
         lazy: false,
         onComplete: () => {
           setTimeout(() => {
