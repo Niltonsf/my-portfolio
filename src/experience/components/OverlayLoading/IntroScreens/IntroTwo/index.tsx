@@ -8,7 +8,7 @@ interface IntroTwoProps {
 export default function IntroTwo({ setPresentationScreens }: IntroTwoProps) {
   useEffect(() => {
     setTimeout(() => {
-      gsap.to(".localHtml", {
+      gsap.to(".introText", {
         opacity: 1,
         lazy: false,
         onComplete: () => {
