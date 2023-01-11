@@ -6,7 +6,7 @@
 }
 
 .contact_card {
-  width: 400px;
+  width: 300px;
   background-color: var(--container-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1rem;

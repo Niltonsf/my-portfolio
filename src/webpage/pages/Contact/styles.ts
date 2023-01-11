@@ -9,13 +9,11 @@ interface MediaQuery {
 }
 
 export const ContactContainer = styled.div.attrs({
-  className: "container grid",
+  className: "container",
 })<MediaQuery>`
   ${(props) => {
     let finalStyles = `
-    grid-template-columns: repeat(1, max-content);
-    justify-content: center;
-    column-gap: 6rem;
+    flex: 1;            
     padding-bottom: 3rem;
   `;
     if (props.mediumDevices) {
@@ -35,16 +33,19 @@ export const ContactContainer = styled.div.attrs({
 export const ContactInfo = styled.div<MediaQuery>`
   ${(props) => {
     let finalStyles = `
-    grid-template-columns: 1fr 1fr; 
-`;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;      
+    `;
     if (props.smallMediumDevices) {
       finalStyles += `
-      grid-template-columns: 1fr;
-    `;
+      flex-direction: column;
+      `;
     } else if (props.mediumDevices) {
       finalStyles += `
-      justify-content: center;
-    `;
+        flex-direction: column;
+      `;
     }
     return finalStyles;
   }}
