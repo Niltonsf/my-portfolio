@@ -1,9 +1,10 @@
 import React from "react";
 import "./index.css";
+import { isMobile } from "react-device-detect";
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" style={isMobile ? { marginBottom: 60 } : {}}>
       <div className="footer__container container">
         <h1 className="footer_title">Nilton Antônio Schumacher Filho</h1>
 
