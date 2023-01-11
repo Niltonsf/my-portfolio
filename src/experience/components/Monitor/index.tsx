@@ -46,7 +46,9 @@ export default function Monitor({
                 src="https://niltonsf.dev/static"
                 // src="http://192.168.1.13:3000/static"
                 title="myStaticWebsite"
-                style={{ width: isMobile ? 1200 : 1500 }}
+                style={{
+                  width: isMobile ? 1200 : 1500,
+                }}
               />
             </div>
           </Html>
