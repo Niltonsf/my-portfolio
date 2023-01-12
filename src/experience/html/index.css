@@ -1,0 +1,11 @@
+.circleBackground {
+  fill: none;
+  stroke: rgb(96, 96, 96);
+}
+
+.circleProgress {
+  fill: none;
+  stroke: var(--light-blue);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

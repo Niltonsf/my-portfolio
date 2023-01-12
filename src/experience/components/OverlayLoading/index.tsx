@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import portalVertexShader from "../../shaders/vertex";
 import portalFragmentShader from "../../shaders/fragment";
-import HtmlOverlay from "./Html";
+import HtmlOverlay from "./screenHandler";
 
 interface OverlayLoadingProps {
   setOrbitControlsDisabled: Dispatch<SetStateAction<boolean>>;
