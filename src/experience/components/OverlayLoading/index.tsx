@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import portalVertexShader from "../../shaders/vertex";
 import portalFragmentShader from "../../shaders/fragment";
-import HtmlOverlay from "./screenHandler";
+import LoaderScreensHandler from "./loaderScreensHandler";
 
 interface OverlayLoadingProps {
   setOrbitControlsDisabled: Dispatch<SetStateAction<boolean>>;
@@ -33,7 +33,7 @@ export default function OverlayLoading({
             uAlpha: { value: 1 },
           }}
         />
-        <HtmlOverlay
+        <LoaderScreensHandler
           setHideOverlay={setHideOverlay}
           setHiddenLeva={setHiddenLeva}
           setOrbitControlsDisabled={setOrbitControlsDisabled}

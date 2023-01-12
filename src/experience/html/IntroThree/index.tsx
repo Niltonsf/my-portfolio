@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useEffect } from "react";
+import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 
 import gsap from "gsap";
 
@@ -17,6 +17,9 @@ export default function IntroThree({
   planeMeshRef,
   navigate,
 }: IntroThreeProps) {
+  const experienceTextRef = useRef<any>();
+  const normalTextRef = useRef<any>();
+
   const handleIntroFinish = (normalWebsite: boolean) => {
     setTimeout(() => {
       gsap.to(".htmlComponent", {
@@ -70,8 +73,12 @@ export default function IntroThree({
             redirected to my normal website.
           </span>
           <span
+            ref={experienceTextRef}
             className="introText finalText"
-            onClick={() => handleIntroFinish(false)}
+            onClick={() => {
+              experienceTextRef.current.classList.toggle("fullTextWidth");
+              handleIntroFinish(false);
+            }}
             style={{
               opacity: 0,
               fontSize: 60,
@@ -81,8 +88,12 @@ export default function IntroThree({
             Experience
           </span>
           <span
+            ref={normalTextRef}
             className="introText finalText"
-            onClick={() => handleIntroFinish(true)}
+            onClick={() => {
+              normalTextRef.current.classList.toggle("fullTextWidth");
+              handleIntroFinish(true);
+            }}
             style={{
               opacity: 0,
               fontSize: 60,

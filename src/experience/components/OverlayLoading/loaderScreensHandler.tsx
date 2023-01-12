@@ -5,19 +5,19 @@ import IntroTwo from "../../html/IntroTwo";
 import IntroThree from "../../html/IntroThree";
 import { useNavigate } from "react-router-dom";
 
-interface HtmlOverlayProps {
+interface LoaderScreensHandlerProps {
   setOrbitControlsDisabled: Dispatch<SetStateAction<boolean>>;
   setHiddenLeva: Dispatch<SetStateAction<boolean>>;
   setHideOverlay: Dispatch<SetStateAction<boolean>>;
   planeMeshRef: any;
 }
 
-export default function HtmlOverlay({
+export default function LoaderScreensHandler({
   setHideOverlay,
   setHiddenLeva,
   setOrbitControlsDisabled,
   planeMeshRef,
-}: HtmlOverlayProps) {
+}: LoaderScreensHandlerProps) {
   const navigate = useNavigate();
 
   const [presentationScreens, setPresentationScreens] = useState(0);

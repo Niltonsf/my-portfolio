@@ -9,3 +9,51 @@
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+
+.commonHtml {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.introText {
+  color: #a9a9a9;
+  font-size: 20px;
+  font-family: "SFMedium";
+}
+
+.localHtml {
+  display: flex;
+  margin-top: -110px;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.finalText {
+  cursor: pointer;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+}
+
+.finalText:before {
+  content: attr(data-text);
+  position: absolute;
+  color: #fff;
+  width: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.fullTextWidth {
+  width: 100;
+  color: #fff;
+}
+
+.finalText:hover::before {
+  width: 100%;
+}
