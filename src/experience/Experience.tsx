@@ -6,7 +6,6 @@ import * as THREE from "three";
 import Room from "./components/Room";
 import useLevaControls from "./hook/useLevaControls";
 import OverlayLoading from "./components/OverlayLoading";
-import { ContactShadows, Environment } from "@react-three/drei";
 
 interface ExperienceProps {
   setHiddenLeva: Dispatch<SetStateAction<boolean>>;
