@@ -27,7 +27,7 @@ export default function Header() {
                   style={
                     mediumDevices
                       ? { display: "block", fontSize: `1.2rem` }
-                      : {}
+                      : { display: "none" }
                   }
                 ></i>
                 Home
@@ -40,7 +40,7 @@ export default function Header() {
                   style={
                     mediumDevices
                       ? { display: "block", fontSize: `1.2rem` }
-                      : {}
+                      : { display: "none" }
                   }
                 ></i>
                 About
@@ -53,7 +53,7 @@ export default function Header() {
                   style={
                     mediumDevices
                       ? { display: "block", fontSize: `1.2rem` }
-                      : {}
+                      : { display: "none" }
                   }
                 ></i>
                 Skills
@@ -66,7 +66,7 @@ export default function Header() {
                   style={
                     mediumDevices
                       ? { display: "block", fontSize: `1.2rem` }
-                      : {}
+                      : { display: "none" }
                   }
                 ></i>
                 Qualification
@@ -79,7 +79,7 @@ export default function Header() {
                   style={
                     mediumDevices
                       ? { display: "block", fontSize: `1.2rem` }
-                      : {}
+                      : { display: "none" }
                   }
                 ></i>
                 Portfolio
@@ -92,7 +92,7 @@ export default function Header() {
                   style={
                     mediumDevices
                       ? { display: "block", fontSize: `1.2rem` }
-                      : {}
+                      : { display: "none" }
                   }
                 ></i>
                 Contact

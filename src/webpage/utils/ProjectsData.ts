@@ -64,7 +64,4 @@ export const projectsNav = [
   {
     name: "3D",
   },
-  {
-    name: "Colaborated",
-  },
 ];

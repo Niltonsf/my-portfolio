@@ -33,7 +33,7 @@ export default function IntroTwo({ setPresentationScreens }: IntroTwoProps) {
           className="introText finalText"
           style={{
             opacity: 0,
-            fontSize: 70,
+            fontSize: 60,
             cursor: "default",
           }}
         >

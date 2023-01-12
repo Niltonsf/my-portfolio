@@ -72,7 +72,7 @@ export default function Data() {
         dedicated, helpful, grateful for all working enviroments and
         opportunities.
       </HomeDescription>
-      <a href="#contact" className="button button--flex">
+      <a href="#contact" className="button button--flex" style={{ width: 150 }}>
         Say Hello
         <svg
           className="button__icon"

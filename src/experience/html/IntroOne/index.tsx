@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useEffect } from "react";
 import { useProgress } from "@react-three/drei";
 import gsap from "gsap";
+import CircularProgress from "../CircularProgress";
 
 interface IntroOneProps {
   setPresentationScreens: Dispatch<SetStateAction<number>>;
@@ -35,33 +36,25 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
   }, [progress, setPresentationScreens]);
 
   return (
-    <div className="localHtml">
-      <div className="commonHtml">
-        <div style={{ marginBottom: 20 }}>
+    <>
+      <div className="localHtml">
+        <div className="commonHtml">
           <span
             className="introText finalText"
             style={{
               display: "table",
-              fontSize: 40,
+              position: "absolute",
+              fontSize: 30,
               cursor: "default",
               textAlign: "center",
             }}
           >
-            We are loading your experience
+            loading your experience
           </span>
-        </div>
 
-        <div className="progressBar">
-          <div
-            style={{
-              height: "100%",
-              borderRadius: 10,
-              width: `${progress}%`,
-              backgroundColor: "#0061FF",
-            }}
-          ></div>
+          <CircularProgress progress={progress} />
         </div>
       </div>
-    </div>
+    </>
   );
 }

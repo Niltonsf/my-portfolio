@@ -3,26 +3,26 @@ import ReactDOMClient from "react-dom/client";
 import "./index.css";
 import "./font.css";
 import MainExperience from "./experience/main";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MainWebpage from "./webpage/main";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <MainExperience />,
-  },
-  {
-    path: "/static",
-    element: <MainWebpage />,
-  },
-]);
 
 const root = ReactDOMClient.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
+const App = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<MainExperience />} />
+      <Route path="/static" element={<MainWebpage />} />
+    </Routes>
+  );
+};
+
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Router>
+      <App />
+    </Router>
   </React.StrictMode>
 );
