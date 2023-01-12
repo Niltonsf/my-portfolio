@@ -1,12 +1,16 @@
-interface FloorProps {
-  geometry: THREE.BufferGeometry;
-  bakedTexture: THREE.Texture;
-}
+import { MeshReflectorMaterial } from "@react-three/drei";
 
-export default function Floor({ geometry, bakedTexture }: FloorProps) {
+export default function Floor() {
   return (
-    <mesh geometry={geometry}>
-      <meshBasicMaterial map={bakedTexture} />
+    <mesh rotation-x={-Math.PI * 0.5} scale={30} position={[-3, 0, -3]}>
+      <planeGeometry />
+      <MeshReflectorMaterial
+        mirror={0.9}
+        resolution={512}
+        blur={[1000, 1000]}
+        mixBlur={1}
+        envMapIntensity={0.2}
+      />
     </mesh>
   );
 }
