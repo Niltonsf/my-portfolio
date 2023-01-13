@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 
 import gsap from "gsap";
+import { useMediaQuery } from "usehooks-ts";
 
 interface IntroThreeProps {
   setOrbitControlsDisabled: Dispatch<SetStateAction<boolean>>;
@@ -17,8 +18,28 @@ export default function IntroThree({
   planeMeshRef,
   navigate,
 }: IntroThreeProps) {
+  const smallMediumDevices = useMediaQuery("(max-width: 576px)");
+  const smallDevices = useMediaQuery("(max-width: 400px)");
   const experienceTextRef = useRef<any>();
   const normalTextRef = useRef<any>();
+
+  function handleSizes() {
+    if (smallDevices) {
+      return {
+        textSize: 40,
+        textWidth: 300,
+      };
+    } else if (smallMediumDevices) {
+      return {
+        textSize: 40,
+        textWidth: 400,
+      };
+    }
+    return {
+      textSize: 60,
+      textWidth: 500,
+    };
+  }
 
   const handleIntroFinish = (normalWebsite: boolean) => {
     setTimeout(() => {
@@ -45,6 +66,7 @@ export default function IntroThree({
       });
     }, 1500);
   };
+
   useEffect(() => {
     setTimeout(() => {
       gsap.to(".introText", {
@@ -64,7 +86,13 @@ export default function IntroThree({
             alignItems: "center",
           }}
         >
-          <span style={{ width: 500, textAlign: "center", marginBottom: 20 }}>
+          <span
+            style={{
+              width: handleSizes().textWidth,
+              textAlign: "center",
+              marginBottom: 20,
+            }}
+          >
             Here you can select what type of experience you want to have, by
             pressing{" "}
             <span style={{ fontFamily: "SFSemiBold" }}>EXPERIENCE</span>, you
@@ -81,7 +109,7 @@ export default function IntroThree({
             }}
             style={{
               opacity: 0,
-              fontSize: 60,
+              fontSize: handleSizes().textSize,
             }}
             data-text="Experience"
           >
@@ -96,7 +124,7 @@ export default function IntroThree({
             }}
             style={{
               opacity: 0,
-              fontSize: 60,
+              fontSize: handleSizes().textSize,
             }}
             data-text="Normal"
           >
