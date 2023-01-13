@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction, useEffect } from "react";
 import { useProgress } from "@react-three/drei";
 import gsap from "gsap";
 import CircularProgress from "../CircularProgress";
+import { useMediaQuery } from "usehooks-ts";
 
 interface IntroOneProps {
   setPresentationScreens: Dispatch<SetStateAction<number>>;
@@ -9,6 +10,26 @@ interface IntroOneProps {
 
 export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
   const { progress } = useProgress();
+  const smallMediumDevices = useMediaQuery("(max-width: 576px)");
+  const smallDevices = useMediaQuery("(max-width: 350px)");
+
+  function handleWidthAndTextSize() {
+    if (smallDevices) {
+      return {
+        textSize: 20,
+        width: 200,
+      };
+    } else if (smallMediumDevices) {
+      return {
+        textSize: 20,
+        width: 300,
+      };
+    }
+    return {
+      textSize: 30,
+      width: 600,
+    };
+  }
 
   useEffect(() => {
     setTimeout(() => {
@@ -42,9 +63,10 @@ export default function IntroOne({ setPresentationScreens }: IntroOneProps) {
           <span
             className="introText finalText"
             style={{
+              width: handleWidthAndTextSize()?.width,
               display: "table",
               position: "absolute",
-              fontSize: 30,
+              fontSize: handleWidthAndTextSize()?.textSize,
               cursor: "default",
               textAlign: "center",
             }}
