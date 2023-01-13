@@ -17,8 +17,8 @@ export default function Chair({
   const chairRef = useRef<any>();
 
   useFrame((state, delta) => {
-    // chairRef.current.rotation.y =
-    //   Math.sin(state.clock.elapsedTime * 0.6) * 0.4 + 900;
+    chairRef.current.rotation.y =
+      Math.sin(state.clock.elapsedTime * 0.6) * 0.2 + -25;
   });
 
   return (
@@ -26,6 +26,7 @@ export default function Chair({
       ref={chairRef}
       geometry={geometry}
       visible={isMobile ? !isViewingWebpage : true}
+      position={[-0.9, 1.4, -0.04]}
     >
       <meshBasicMaterial map={bakedTexture} />
     </mesh>
