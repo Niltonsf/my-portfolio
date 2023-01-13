@@ -1,6 +1,6 @@
 .skills_title {
   font-size: var(--normal-font-size);
-  font-family: "SFMedium";
+  font-family: "Fira Code";
   text-align: center;
   margin-bottom: var(--mb-1-5);
 }
@@ -25,7 +25,7 @@
 
 .skills_name {
   font-size: var(--normal-font-size);
-  font-family: "SFMedium";
+  font-family: "Fira Code";
   margin-top: -1px;
   margin-bottom: -1px;
   line-height: 18px;

@@ -68,7 +68,7 @@ export const SkillsName = styled.h3<MediaQuery>`
   ${(props) => {
     let finalStyles = `
       font-size: var(--normal-font-size);
-      font-family: "SFMedium";
+      font-family: "Fira Code";
       margin-top: -1px;
       margin-bottom: -1px;
       line-height: 18px;

@@ -91,14 +91,19 @@ export default function IntroThree({
               width: handleSizes().textWidth,
               textAlign: "center",
               marginBottom: 20,
-              fontFamily: "SFLight",
+              fontFamily: "Fira Code",
             }}
           >
             Here you can select what type of experience you want to have, by
-            pressing <span style={{ fontFamily: "SFMedium" }}>EXPERIENCE</span>,
-            you will be redirected to my 3D website. By pressing{" "}
-            <span style={{ fontFamily: "SFMedium" }}>NORMAL</span> you will be
-            redirected to my normal website.
+            pressing{" "}
+            <span style={{ fontFamily: "Fira Code", fontWeight: 700 }}>
+              EXPERIENCE
+            </span>
+            , you will be redirected to my 3D website. By pressing{" "}
+            <span style={{ fontFamily: "Fira Code", fontWeight: 700 }}>
+              NORMAL
+            </span>{" "}
+            you will be redirected to my normal website.
           </span>
           <span
             ref={experienceTextRef}
@@ -125,6 +130,7 @@ export default function IntroThree({
             style={{
               opacity: 0,
               fontSize: handleSizes().textSize,
+              letterSpacing: 1.5,
             }}
             data-text="Normal"
           >

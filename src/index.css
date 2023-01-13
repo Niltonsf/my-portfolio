@@ -5,6 +5,7 @@
   width: 100%;
   height: 100%;
   background: white;
+  font-family: "Fira Code";
   -webkit-overflow-scrolling: touch;
 }
 
@@ -36,7 +37,7 @@ canvas {
   --light-blue: #0277bd;
 
   /*========== Font and typography ==========*/
-  --body-font: "SFRegular", sans-serif;
+  --body-font: "Fira Code", monospace;
 
   /*.5rem = 8px | 1rem = 16px ...*/
   --big-font-size: 3.5rem;
@@ -74,7 +75,7 @@ body,
 button,
 input,
 textarea {
-  font-family: "SFRegular";
+  font-family: "Fira Code", monospace;
   font-size: var(--normal-font-size);
 }
 
