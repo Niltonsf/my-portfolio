@@ -1,7 +1,7 @@
 .contact_title {
   text-align: center;
   font-size: var(--h3-font-size);
-  font-family: "SFMedium";
+  font-family: "Fira Code";
   margin-bottom: var(--mb-1-5);
 }
 
@@ -26,7 +26,7 @@
 }
 
 .contact_card-title {
-  font-family: "SFMedium";
+  font-family: "Fira Code";
 }
 
 .contact_card-data {

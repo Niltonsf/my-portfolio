@@ -2,7 +2,7 @@
   cursor: pointer;
   color: var(--title-color);
   padding: 0.25rem 0.75rem;
-  font-family: "SFMedium";
+  font-family: "Fira Code";
   border-radius: 0.5rem;
   text-transform: capitalize;
 }
@@ -19,7 +19,7 @@
 
 .work_title {
   font-size: var(--normal-font-size);
-  font-family: "SFMedium";
+  font-family: "Fira Code";
   margin-bottom: var(--mb-0-5);
 }
 

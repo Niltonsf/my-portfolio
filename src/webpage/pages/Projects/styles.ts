@@ -74,7 +74,7 @@ export const WorkTitle = styled.h3<MediaQuery>`
   ${(props) => {
     let finalStyles = `
       font-size: var(--normal-font-size);
-      font-family: "SFMedium";
+      font-family: "Fira Code";
       margin-bottom: var(--mb-0-5);
     `;
     if (props.largeDevices) {
