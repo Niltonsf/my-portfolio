@@ -1,7 +1,7 @@
 .nav_logo,
 .nav_toggle {
   color: var(--title-color);
-  font-family: "SFMedium";
+  font-family: "Fira Code";
 }
 
 .nav_link {
@@ -10,7 +10,7 @@
   align-items: center;
   font-size: var(--small-font-size);
   color: var(--title-color);
-  font-family: "SFMedium";
+  font-family: "Fira Code";
   transition: 0.3s;
 }
 

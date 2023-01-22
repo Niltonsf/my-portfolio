@@ -6,7 +6,7 @@
 
 .qualification_button {
   font-size: var(--h3-font-size);
-  font-family: "SFMedium";
+  font-family: "Fira Code";
   color: var(--title-color);
   margin: 0 var(--mb-1);
   cursor: pointer;
@@ -35,7 +35,7 @@
 
 .qualification_title {
   font-size: var(--normal-font-size);
-  font-family: "SFMedium";
+  font-family: "Fira Code";
 }
 
 .qualification_subtitle {
@@ -51,7 +51,7 @@
 .qualification_website {
   font-size: var(--small-font-size);
   color: var(--light-blue);
-  font-family: "SFMedium";
+  font-family: "Fira Code";
   transition: 0.3s;
 }
 

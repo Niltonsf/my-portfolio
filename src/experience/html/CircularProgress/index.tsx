@@ -1,9 +1,22 @@
 import React from "react";
+import { useMediaQuery } from "usehooks-ts";
 import "../index.css";
 
 export default function CircularProgress({ progress }: any) {
+  const smallMediumDevices = useMediaQuery("(max-width: 576px)");
+  const smallDevices = useMediaQuery("(max-width: 350px)");
+
+  function handleCircleRadius() {
+    if (smallDevices) {
+      return 120;
+    } else if (smallMediumDevices) {
+      return 160;
+    }
+    return 250;
+  }
+
   const circleWidth = 550;
-  const radius = 250;
+  const radius = handleCircleRadius();
   const dashArray = radius * Math.PI * 2;
   const dashOffset = dashArray - (dashArray * progress) / 100;
 
