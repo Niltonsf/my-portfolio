@@ -43,8 +43,7 @@ export default function Monitor({
             >
               <iframe
                 id="iframe"
-                src="https://niltonsf.dev/static"
-                // src="http://192.168.1.13:3000/static"
+                src="https://niltonsf.dev/static?remove=true"
                 title="myStaticWebsite"
                 style={{
                   width: isMobile ? 1200 : 1500,

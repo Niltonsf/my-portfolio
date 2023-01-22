@@ -7,10 +7,13 @@ import { useNavigate } from "react-router-dom";
 
 export default function Header() {
   const navigate = useNavigate();
+  const params = new URLSearchParams(window.location.search);
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const mediumDevices = useMediaQuery("(max-width: 768px)");
   const smallDevices = useMediaQuery("(max-width: 350px)");
+
+  console.log(params.get("remove"));
 
   return (
     <HeaderCP mediumDevices={mediumDevices}>
@@ -101,24 +104,27 @@ export default function Header() {
                 Contact
               </a>
             </li>
-            <li className="nav_item">
-              <a
-                // eslint-disable-next-line no-script-url
-                href="javascript:;"
-                className="nav_link"
-                onClick={() => navigate("/", { state: { skip: true } })}
-              >
-                <i
-                  className="uil uil-message nav_icon"
-                  style={
-                    mediumDevices
-                      ? { display: "block", fontSize: `1.2rem` }
-                      : { display: "none" }
-                  }
-                ></i>
-                3D
-              </a>
-            </li>
+            {(params.get("remove") === "false" ||
+              params.get("remove") === null) && (
+              <li className="nav_item">
+                <a
+                  // eslint-disable-next-line no-script-url
+                  href="javascript:;"
+                  className="nav_link"
+                  onClick={() => navigate("/", { state: { skip: true } })}
+                >
+                  <i
+                    className="uil uil-message nav_icon"
+                    style={
+                      mediumDevices
+                        ? { display: "block", fontSize: `1.2rem` }
+                        : { display: "none" }
+                    }
+                  ></i>
+                  3D
+                </a>
+              </li>
+            )}
           </Ul>
 
           <CloseIcon

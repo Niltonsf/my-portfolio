@@ -10,7 +10,6 @@ const root = ReactDOMClient.createRoot(
 );
 
 const App = () => {
-  console.log(document.fonts);
   return (
     <Routes>
       <Route path="/" element={<MainExperience />} />
