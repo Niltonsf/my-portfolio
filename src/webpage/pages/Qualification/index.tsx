@@ -27,12 +27,24 @@ export default function Qualification() {
         <QualificationSections smallMediumDevices={smallMediumDevices}>
           <div className="qualification_content qualification_content-active">
             <QualificationData
+              left={false}
+              title={"Lead on React Native project"}
+              location={"Curitiba/Brazil as 100% remote"}
+              company={"Inmeta"}
+              companyWebsite={"https://www.inmeta.com.br/"}
+              state={"Freelancer"}
+              timeWorking={"18pm - 22pm"}
+              calendar={"january 2023 - Present"}
+            />
+
+            <QualificationData
               left={true}
               title={"Midlevel React Native Developer"}
               location={"Curitiba/Brazil as 100% remote"}
               company={"Univision"}
               companyWebsite={"https://univision.net.br/"}
               state={"Employee"}
+              timeWorking={"9am - 18pm"}
               calendar={"dezember 2022 - Present"}
             />
 
@@ -42,6 +54,7 @@ export default function Qualification() {
               company={"Crowdform"}
               companyWebsite={"https://crowdform.studio/"}
               state={"Freelancer"}
+              timeWorking={"9am - 18pm"}
               calendar={"october 2021 - dezember 2022"}
             />
 
@@ -52,6 +65,7 @@ export default function Qualification() {
               company={"Alta Rail Technology"}
               companyWebsite={"https://alta-rt.com/pt-br/"}
               state={"Employee"}
+              timeWorking={"9am - 16pm"}
               calendar={"april 2021 - october 2021"}
             />
           </div>

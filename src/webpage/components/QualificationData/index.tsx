@@ -9,6 +9,7 @@ export default function QualificationData({
   companyWebsite,
   location,
   state,
+  timeWorking,
 }: any) {
   const smallDevices = useMediaQuery("(max-width: 350px)");
 
@@ -40,6 +41,9 @@ export default function QualificationData({
               </span>
               <span className="qualification_subtitle">
                 Contracted as: {state}
+              </span>
+              <span className="qualification_subtitle">
+                Working hours: {timeWorking}
               </span>
               <div className="qualification_calendar">
                 <i className="uil uil-calendar-alt"></i> {calendar}
@@ -77,6 +81,9 @@ export default function QualificationData({
             <span className="qualification_subtitle">Location: {location}</span>
             <span className="qualification_subtitle">
               Contracted as: {state}
+            </span>
+            <span className="qualification_subtitle">
+              Working hours: {timeWorking}
             </span>
             <div className="qualification_calendar">
               <i className="uil uil-calendar-alt"></i> {calendar}

@@ -1,6 +1,9 @@
-import { useControls } from "leva";
+import { button, useControls } from "leva";
+import { useNavigate } from "react-router-dom";
 
 export default function useLevaControls() {
+  const navigate = useNavigate();
+
   const { showPerformace } = useControls(
     "Performaces",
     {
@@ -15,6 +18,7 @@ export default function useLevaControls() {
     viewWebpage: {
       value: false,
     },
+    normalSite: button(() => navigate("/static")),
   });
 
   return {

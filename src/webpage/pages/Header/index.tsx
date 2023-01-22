@@ -1,9 +1,12 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import "./index.css";
 import { HeaderCP, Nav, NavMenu, Ul, CloseIcon } from "./styles";
 import { useMediaQuery } from "usehooks-ts";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const mediumDevices = useMediaQuery("(max-width: 768px)");
@@ -96,6 +99,24 @@ export default function Header() {
                   }
                 ></i>
                 Contact
+              </a>
+            </li>
+            <li className="nav_item">
+              <a
+                // eslint-disable-next-line no-script-url
+                href="javascript:;"
+                className="nav_link"
+                onClick={() => navigate("/", { state: { skip: true } })}
+              >
+                <i
+                  className="uil uil-message nav_icon"
+                  style={
+                    mediumDevices
+                      ? { display: "block", fontSize: `1.2rem` }
+                      : { display: "none" }
+                  }
+                ></i>
+                3D
               </a>
             </li>
           </Ul>
